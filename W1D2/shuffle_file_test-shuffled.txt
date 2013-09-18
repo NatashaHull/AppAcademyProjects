@@ -1,0 +1,7 @@
+  file_lines.each { |line| file.puts line }
+end
+filename.gsub!('.txt', '')
+File.open("#{filename}-shuffled.txt", 'w') do |file|
+puts "Enter a file to shuffle"
+file_lines = File.readlines(filename).shuffle
+filename = gets.chomp
