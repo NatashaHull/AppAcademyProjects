@@ -10,3 +10,6 @@ Nathan Holland
 
 Ben Hass
 
+**Week 1, Day 3 (W1D3)**
+
+Yu Heng Kang
