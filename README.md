@@ -13,3 +13,7 @@ Ben Hass
 **Week 1, Day 3 (W1D3)**
 
 Yu Heng Kang
+
+**Week 1, Day 4 (W1D4)**
+
+Solo Day
