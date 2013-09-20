@@ -17,3 +17,7 @@ Yu Heng Kang
 **Week 1, Day 4 (W1D4)**
 
 Solo Day
+
+**Week 1, Day 5 (W1D5)**
+
+Chris Evans
