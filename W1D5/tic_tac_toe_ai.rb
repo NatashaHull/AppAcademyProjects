@@ -1,7 +1,5 @@
 #Comments on what follows:
-#This code became so buggy from trying to implement methods at once, I was unable to get
-#very far with it. I would be happy with someone fixing this code, but I have done almost
-#all that I can with it for now.  If you want to see a working Tic-Tac-Toe AI, look at the
+#This code doesn't work.  If you want to see a working Tic-Tac-Toe AI, look at the
 #tic_tac_toe_ai2.rb file in this directory.
 require 'set'
 
