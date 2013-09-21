@@ -1,5 +1,7 @@
 AppAcademyProjects
 ==================
+To see my own thoughts about much of this code and the days surrounding my creating it, check out the corrensponding tumblr blog: http://natashaaareflection.tumblr.com/
+
 Below is a list of the people with whom I paired on each of these projects.
 
 **Week 1, Day 1 (W1D1)**
