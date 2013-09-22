@@ -43,3 +43,4 @@ end
 
 p find_chain("week", "year")
 p find_chain("brake", "brand")
+p find_chain("brake", "salad")
