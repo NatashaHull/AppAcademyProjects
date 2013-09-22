@@ -1,3 +1,9 @@
+#Unfortunately, my computer does not have enough memory to perform the final tests.
+#My algorithm and heuristic should work, but they might not work due to my inability to
+#test them. Regardless, this was mostly an effort to work with data structures than a
+#genuine effort to create a working word chain program (I have a working one in my 'W1D4'
+#directory).
+
 require 'set'
 
 module Searchable
@@ -143,4 +149,4 @@ p GraphNode.include?("year") # => "true"
 
 #Test for Searchable
 p start_word.word_chain("year")
-p start_word.word_chain("")
+p start_word.word_chain("help")
