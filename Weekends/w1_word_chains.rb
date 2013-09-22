@@ -47,10 +47,10 @@ class GraphNode
 	end
 
 	def add_relatives(relative)
-		return @relatives if @relatives.include?(relative)
 		new_relative = GraphNode.include?(relative) ? GraphNode.find_by_value(relative) : GraphNode.new(relative)
-		@relatives << new_relative
-		new_relative.add_relatives(self.value) unless new_relative.relatives.include?(self)
+		@relatives << new_relative unless @relatives.include?(new_relative)
+		new_relative.add_relatives(@value) unless new_relative.relatives.include?(self)
+		new_relative
 	end
 
 	def self.include?(value)
@@ -74,8 +74,8 @@ class WordChain
 	def build_word_graph
 		relative_words = [@word_graph]
 		closed_set = Set[@word_graph]
-		until frontier.empty?
-			current_node = frontier.shift
+		until relative_words.empty?
+			current_node = relative_words.shift
 			current_word = current_node.value
 			find_nearby_words(current_word).each do |new_word|
 				new_node = current_node.add_relatives(new_word)
@@ -91,7 +91,7 @@ class WordChain
 		nearby_words = []
 		(0..word.length-1).each do |letter_i|
 			("a".."z").each do |letter|
-				new_word = current_word.dup
+				new_word = word.dup
 				new_word[letter_i] = letter
 				nearby_words << new_word if DICTIONARY.include?(new_word) && new_word != word
 			end
@@ -104,7 +104,7 @@ class WordChain
 	end
 end
 
-##Test for graphs and the searchable module
+##Test for the graph data structure
 start_node = GraphNode.new("test")
 other_node = GraphNode.new("fest")
 start_node.add_relatives("fest")
@@ -128,3 +128,19 @@ p start_node == GraphNode.find_by_value("test") # => "true"
 p start_node.relatives[0] == GraphNode.find_by_value("fest") # => "true"
 p start_node.relatives[0] == GraphNode.find_by_value("pest") # => "false"
 p start_node == GraphNode.find_by_value("pest") # => "false"
+
+#Tests for Word Chains class
+start_word = WordChain.new("week")
+
+p GraphNode.include?("week") # => "true"
+p GraphNode.include?("year") # => "false"
+
+#Test for building the word graph
+start_word.build_word_graph
+
+p GraphNode.include?("week") # => "true"
+p GraphNode.include?("year") # => "true"
+
+#Test for Searchable
+p start_word.word_chain("year")
+p start_word.word_chain("")
