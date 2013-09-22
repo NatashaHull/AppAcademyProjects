@@ -37,20 +37,20 @@ end
 #Here I create a graph data structure to contain graph information
 class GraphNode
 	include Searchable
-	attr_reader :relatives
+	attr_reader :relatives, :value
 	@@values = {}
 
 	def initialize(value)
 		@value = value
 		@relatives = []
-		@@values_hash[value] = self
+		@@values[value] = self
 	end
 
 	def add_relatives(relative)
 		return @relatives if @relatives.include?(relative)
-		new_relative = include?(relative) ? find_by_value(relative) : GraphNode.new(relative)
+		new_relative = GraphNode.include?(relative) ? GraphNode.find_by_value(relative) : GraphNode.new(relative)
 		@relatives << new_relative
-		new_relative.add_relatives(self)
+		new_relative.add_relatives(self.value) unless new_relative.relatives.include?(self)
 	end
 
 	def self.include?(value)
@@ -106,21 +106,25 @@ end
 
 ##Test for graphs and the searchable module
 start_node = GraphNode.new("test")
+other_node = GraphNode.new("fest")
+start_node.add_relatives("fest")
 start_node.add_relatives("rest")
 start_node.add_relatives("pest")
 
-p start_node.value
-p start_node.relatives.map(&:value)
-p start_node.relatives[0].relatives.map(&:value)
+p start_node.value # => "test"
+p start_node.relatives.map(&:value) # => "["fest", "rest", "pest"]"
+p other_node.value # => "fest"
+p other_node.relatives.map(&:value) # => "["test"]"
+p start_node.relatives[0].relatives.map(&:value) # => "["test"]"
 
 #Testing include
-p GraphNode.include?("test")
-p GraphNode.include?("rest")
-p GraphNode.include?("pest")
-p GraphNode.include?("insect")
+p GraphNode.include?("test") # => "true"
+p GraphNode.include?("rest") # => "true"
+p GraphNode.include?("pest") # => "true"
+p GraphNode.include?("insect") # => "false"
 
 #Testing find_by_value
-p start_node == GraphNode.find_by_value("test")
-p start_node.relatives[0] == GraphNode.find_by_value("rest")
-p start_node.relatives[0] == GraphNode.find_by_value("pest")
-p start_node == GraphNode.find_by_value("pest")
+p start_node == GraphNode.find_by_value("test") # => "true"
+p start_node.relatives[0] == GraphNode.find_by_value("fest") # => "true"
+p start_node.relatives[0] == GraphNode.find_by_value("pest") # => "false"
+p start_node == GraphNode.find_by_value("pest") # => "false"
