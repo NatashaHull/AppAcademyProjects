@@ -1,0 +1,18 @@
+<h2>New Link</h2>
+
+<%= render :partial => "layouts/errors" %>
+
+<form action="/links" method="post" accept-charset="utf-8">
+  <input type="hidden" 
+    name="authenticity_token" 
+    value="<%= form_authenticity_token %>" 
+    id="authenticity_token">
+
+  <label for="title">Title</label>
+  <input type="text" name="link[title]" value="<%= @link.title %>" id="title">
+
+  <label for="url">URL</label>
+  <input type="text" name="link[url]" value="<%= @link.url %>" id="url">
+
+  <p><input type="submit" value="Create New Link"></p>
+</form>

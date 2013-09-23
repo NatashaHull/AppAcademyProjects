@@ -1,0 +1,31 @@
+<h2><%= @link.title %></h2>
+<%= link_to @link.url, @link.url %>
+
+<h2>Comments</h2>
+<ul>
+  <% @link.comments.each do |comment| %>
+    <li>
+      <%= comment.body %>
+      <%= button_to "Remove Comment", comment_url(comment), method: :delete %>
+    </li>
+  <% end %>
+</ul>
+
+<hr />
+
+<h4>Add Comment</h4>
+
+<%= render :partial => "layouts/errors" %>
+
+<form action="<%= link_comments_url(@link) %>" method="post">
+  <input type="hidden" 
+    name="authenticity_token" 
+    value="<%= form_authenticity_token %>">
+  
+  <label for="comment">Comment</label>
+  <input type="text" name="comment[body]" value="" id="comment">
+  <input type="submit" value="Add Comment">
+</form>
+
+<%= link_to "Edit Link", edit_link_url(@link) %>
+<%= link_to "Links", links_url %>

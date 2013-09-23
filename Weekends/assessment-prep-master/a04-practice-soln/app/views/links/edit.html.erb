@@ -1,0 +1,19 @@
+<h2>Edit Link</h2>
+
+<%= render :partial => "layouts/errors" %>
+
+<form action="<%= link_url(@link) %>" method="post" accept-charset="utf-8">
+  <input type="hidden" 
+    name="authenticity_token" 
+    value="<%= form_authenticity_token %>" 
+    id="authenticity_token">
+
+  <input type="hidden" name="_method" value="PUT">
+
+  <label for="title">Title</label>
+  <input type="text" name="link[title]" value="<%= @link.title %>" id="title">
+
+  <label for="url">URL</label>
+  <input type="text" name="link[url]" value="<%= @link.url %>" id="url">
+  <p><input type="submit" value="Update Link"></p>
+</form>

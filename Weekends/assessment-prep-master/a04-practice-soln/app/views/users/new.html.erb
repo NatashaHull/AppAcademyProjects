@@ -1,0 +1,13 @@
+<h2>Sign Up</h2>
+
+<%= render :partial => "layouts/errors" %>
+
+<form action="/users" method="post" accept-charset="utf-8">
+  <label for="username">Username</label>
+  <input type="text" name="user[username]" value="" id="username">
+
+  <label for="password">Password</label>
+  <input type="password" name="user[password]" value="" id="password">
+
+  <p><input type="submit" value="Sign Up"></p>
+</form>
