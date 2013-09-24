@@ -2,17 +2,19 @@ require 'yaml'
 class Minesweeper
   attr_accessor :lost, :board
   @@best_times = []
+  @@saved_time = nil
 
   def initialize
     @lost = false
     @player = Player.new
+    @previous_time = nil
   end
 
   def play
     start_new_game
 
+    @start_time = Time.now
     until over?
-      start_time = Time.now
       @board.show
       move = interpret(@player.move)
       return nil if lose?
@@ -21,11 +23,11 @@ class Minesweeper
     end
     @board.show
     game_result
-    completion_time = (Time.now - start_time).to_i
-    @@best_times << completion_time if (@@best_times.length < 10) || (completion_time < @@best_times.sort.last) #Needs to be edited to pop the last completion time if it's worse than the current time
+    completion_time = (Time.now - @start_time).to_i
+    completion_time += @previous_time if @previous_time
+    update_best_times(completion_time)
     puts "It took you #{completion_time} seconds to finish."
-    puts "The best times are:"
-    puts @@best_times
+    print_best_times
   end
 
   def start_new_game
@@ -36,6 +38,7 @@ class Minesweeper
     when 'y'
       saved_game = File.readlines('saved_minesweeper.txt').join('')
       @board = YAML::load(saved_game)
+      @previous_time = @@saved_time
     when 'n'
       create_board
       @board.generate_tiles
@@ -44,6 +47,16 @@ class Minesweeper
       puts "Invalid input."
       start_new_game
     end
+  end
+
+  def update_best_times(completion_time)
+    @@best_times << completion_time
+    @@best_times.sort!.pop unless (@@best_times.length < 10)
+  end
+
+  def print_best_times
+    puts "The best times are:"
+    @@best_times.each do ||
   end
 
   def create_board
@@ -115,6 +128,7 @@ class Minesweeper
         File.open("saved_minesweeper.txt", "w") do |file|
           file.puts @board.to_yaml
         end
+        @@saved_time = (Time.now - @start_time).to_i
         puts "Your game has been saved."
       end
       @lost = true
