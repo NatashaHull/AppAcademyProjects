@@ -50,6 +50,7 @@ class Minesweeper
   end
 
   def update_best_times(completion_time)
+    return nil if lose?
     @@best_times << completion_time
     @@best_times.sort!.pop unless (@@best_times.length < 10)
   end
