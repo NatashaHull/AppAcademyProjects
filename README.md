@@ -23,3 +23,7 @@ Solo Day
 **Week 1, Day 5 (W1D5)**
 
 Chris Evans
+
+**Week 2, Day 1 (W2D1)**
+
+Kenny Chandrasekera
