@@ -1,0 +1,2055 @@
+--- !ruby/object:Board
+size: 16
+mines: 40
+display:
+- - !ruby/object:Tile
+    pos:
+    - 0
+    - 0
+    value: 1
+    neighbors:
+    - &70274863539340 !ruby/object:Tile
+      pos:
+      - 0
+      - 1
+      value: 
+      neighbors: []
+      explored: false
+      flagged: false
+    - &70274863538340 !ruby/object:Tile
+      pos:
+      - 1
+      - 0
+      value: 
+      neighbors: []
+      explored: false
+      flagged: false
+    - &70274863538280 !ruby/object:Tile
+      pos:
+      - 1
+      - 1
+      value: M
+      neighbors: []
+      explored: false
+      flagged: false
+    explored: true
+    flagged: false
+  - *70274863539340
+  - !ruby/object:Tile
+    pos:
+    - 0
+    - 2
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 0
+    - 3
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 0
+    - 4
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 0
+    - 5
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 0
+    - 6
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 0
+    - 7
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 0
+    - 8
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 0
+    - 9
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 0
+    - 10
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 0
+    - 11
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 0
+    - 12
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 0
+    - 13
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 0
+    - 14
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 0
+    - 15
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+- - *70274863538340
+  - *70274863538280
+  - !ruby/object:Tile
+    pos:
+    - 1
+    - 2
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 1
+    - 3
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 1
+    - 4
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 1
+    - 5
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 1
+    - 6
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 1
+    - 7
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 1
+    - 8
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 1
+    - 9
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 1
+    - 10
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 1
+    - 11
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 1
+    - 12
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 1
+    - 13
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 1
+    - 14
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 1
+    - 15
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+- - !ruby/object:Tile
+    pos:
+    - 2
+    - 0
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 2
+    - 1
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 2
+    - 2
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 2
+    - 3
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 2
+    - 4
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 2
+    - 5
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 2
+    - 6
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 2
+    - 7
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 2
+    - 8
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 2
+    - 9
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 2
+    - 10
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 2
+    - 11
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 2
+    - 12
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 2
+    - 13
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 2
+    - 14
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 2
+    - 15
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+- - !ruby/object:Tile
+    pos:
+    - 3
+    - 0
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 3
+    - 1
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 3
+    - 2
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 3
+    - 3
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 3
+    - 4
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 3
+    - 5
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 3
+    - 6
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 3
+    - 7
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 3
+    - 8
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 3
+    - 9
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 3
+    - 10
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 3
+    - 11
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 3
+    - 12
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 3
+    - 13
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 3
+    - 14
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 3
+    - 15
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+- - !ruby/object:Tile
+    pos:
+    - 4
+    - 0
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 4
+    - 1
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 4
+    - 2
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 4
+    - 3
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 4
+    - 4
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 4
+    - 5
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 4
+    - 6
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 4
+    - 7
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 4
+    - 8
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 4
+    - 9
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 4
+    - 10
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 4
+    - 11
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 4
+    - 12
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 4
+    - 13
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 4
+    - 14
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 4
+    - 15
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+- - !ruby/object:Tile
+    pos:
+    - 5
+    - 0
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 5
+    - 1
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 5
+    - 2
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 5
+    - 3
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 5
+    - 4
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 5
+    - 5
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 5
+    - 6
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 5
+    - 7
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 5
+    - 8
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 5
+    - 9
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 5
+    - 10
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 5
+    - 11
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 5
+    - 12
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 5
+    - 13
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 5
+    - 14
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 5
+    - 15
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+- - !ruby/object:Tile
+    pos:
+    - 6
+    - 0
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 6
+    - 1
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 6
+    - 2
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 6
+    - 3
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 6
+    - 4
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 6
+    - 5
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 6
+    - 6
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 6
+    - 7
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 6
+    - 8
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 6
+    - 9
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 6
+    - 10
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 6
+    - 11
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 6
+    - 12
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 6
+    - 13
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 6
+    - 14
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 6
+    - 15
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+- - !ruby/object:Tile
+    pos:
+    - 7
+    - 0
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 7
+    - 1
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 7
+    - 2
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 7
+    - 3
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 7
+    - 4
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 7
+    - 5
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 7
+    - 6
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 7
+    - 7
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 7
+    - 8
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 7
+    - 9
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 7
+    - 10
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 7
+    - 11
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 7
+    - 12
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 7
+    - 13
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 7
+    - 14
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 7
+    - 15
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+- - !ruby/object:Tile
+    pos:
+    - 8
+    - 0
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 8
+    - 1
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 8
+    - 2
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 8
+    - 3
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 8
+    - 4
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 8
+    - 5
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 8
+    - 6
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 8
+    - 7
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 8
+    - 8
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 8
+    - 9
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 8
+    - 10
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 8
+    - 11
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 8
+    - 12
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 8
+    - 13
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 8
+    - 14
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 8
+    - 15
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+- - !ruby/object:Tile
+    pos:
+    - 9
+    - 0
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 9
+    - 1
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 9
+    - 2
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 9
+    - 3
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 9
+    - 4
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 9
+    - 5
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 9
+    - 6
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 9
+    - 7
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 9
+    - 8
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 9
+    - 9
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 9
+    - 10
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 9
+    - 11
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 9
+    - 12
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 9
+    - 13
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 9
+    - 14
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 9
+    - 15
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+- - !ruby/object:Tile
+    pos:
+    - 10
+    - 0
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 10
+    - 1
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 10
+    - 2
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 10
+    - 3
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 10
+    - 4
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 10
+    - 5
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 10
+    - 6
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 10
+    - 7
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 10
+    - 8
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 10
+    - 9
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 10
+    - 10
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 10
+    - 11
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 10
+    - 12
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 10
+    - 13
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 10
+    - 14
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 10
+    - 15
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+- - !ruby/object:Tile
+    pos:
+    - 11
+    - 0
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 11
+    - 1
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 11
+    - 2
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 11
+    - 3
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 11
+    - 4
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 11
+    - 5
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 11
+    - 6
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 11
+    - 7
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 11
+    - 8
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 11
+    - 9
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 11
+    - 10
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 11
+    - 11
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 11
+    - 12
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 11
+    - 13
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 11
+    - 14
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 11
+    - 15
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+- - !ruby/object:Tile
+    pos:
+    - 12
+    - 0
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 12
+    - 1
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 12
+    - 2
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 12
+    - 3
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 12
+    - 4
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 12
+    - 5
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 12
+    - 6
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 12
+    - 7
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 12
+    - 8
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 12
+    - 9
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 12
+    - 10
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 12
+    - 11
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 12
+    - 12
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 12
+    - 13
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 12
+    - 14
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 12
+    - 15
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+- - !ruby/object:Tile
+    pos:
+    - 13
+    - 0
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 13
+    - 1
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 13
+    - 2
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 13
+    - 3
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 13
+    - 4
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 13
+    - 5
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 13
+    - 6
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 13
+    - 7
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 13
+    - 8
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 13
+    - 9
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 13
+    - 10
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 13
+    - 11
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 13
+    - 12
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 13
+    - 13
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 13
+    - 14
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 13
+    - 15
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+- - !ruby/object:Tile
+    pos:
+    - 14
+    - 0
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 14
+    - 1
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 14
+    - 2
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 14
+    - 3
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 14
+    - 4
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 14
+    - 5
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 14
+    - 6
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 14
+    - 7
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 14
+    - 8
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 14
+    - 9
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 14
+    - 10
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 14
+    - 11
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 14
+    - 12
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 14
+    - 13
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 14
+    - 14
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 14
+    - 15
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+- - !ruby/object:Tile
+    pos:
+    - 15
+    - 0
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 15
+    - 1
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 15
+    - 2
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 15
+    - 3
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 15
+    - 4
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 15
+    - 5
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 15
+    - 6
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 15
+    - 7
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 15
+    - 8
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 15
+    - 9
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 15
+    - 10
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 15
+    - 11
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 15
+    - 12
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 15
+    - 13
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 15
+    - 14
+    value: M
+    neighbors: []
+    explored: false
+    flagged: false
+  - !ruby/object:Tile
+    pos:
+    - 15
+    - 15
+    value: 
+    neighbors: []
+    explored: false
+    flagged: false
