@@ -27,3 +27,7 @@ Chris Evans
 **Week 2, Day 1 (W2D1)**
 
 Kenny Chandrasekera
+
+**Week 2, Days 2 and 3 (W2D2-3)**
+
+Jennifer Hamon
