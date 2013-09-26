@@ -2,6 +2,8 @@ require 'colorize'
 require './checkers_pieces.rb'
 
 class Board
+	attr_reader :rows
+
 	def initialize
 		@rows = Array.new(8) { Array.new(8) }
 		init_board
@@ -45,8 +47,32 @@ class Board
 	end
 
 	def valid_move?(player_move)
-		piece = self[player_move[0]]
-		piece && piece.moves(self).include?(player_move[1])
+		#Makes sure there is a piece to move
+		current_piece = self[player_move[0]]
+		return false unless current_piece
+		
+		#Makes sure that that is a valid move for
+		#the selected piece
+		moves = current_piece.moves(self)
+		return false unless moves.include?(player_move[1])
+
+		#If the current move is a killing move it is valid
+		return true if is_killing_move?(player_move)
+		
+		#If it isn't a killing move, but killing moves exist,
+		#for me, then it is not a valid move
+		pieces = @rows.flatten.compact
+		player_pieces = pieces.select do |piece|
+			piece.color == current_piece.color
+		end
+
+		player_pieces.each do |piece|
+			piece.moves(self).each do |move|
+				return false if is_killing_move?([piece.pos, move])
+			end
+		end
+
+		true
 	end
 
 	def can_move_again?
@@ -66,6 +92,7 @@ class Board
 	end
 
 	def display
+		system("clear")
 		row_selector = "abcdefgh"
 		row_separator = "-" * 35
 		puts ("1".."8").to_a.join(' | ').rjust(33)

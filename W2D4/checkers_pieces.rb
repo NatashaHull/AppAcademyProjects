@@ -1,3 +1,4 @@
+# coding: utf-8
 class Piece
 	attr_accessor :color, :pos, :king, :just_jumped
 
@@ -8,7 +9,7 @@ class Piece
 	end
 
 	def mark
-		@king ? "K".colorize(@color) : "p".colorize(@color)
+		@king ? "⛃".colorize(@color) : "⛂".colorize(@color)
 	end
 
 	def move_dirs
@@ -48,12 +49,13 @@ class Piece
 		#Adds moves which kill opponent pieces instead
 		moves = []
 		potential_moves.each_with_index do |move, i|
-			next unless move_on_board(move)
-			if board[move].nil?
+			current_diag = diagonal_kills[i]
+			if move_on_board(move) && board[move].nil?
 				#The move is valid if the square is empty.
 				moves << move
-			elsif board[move].color != @color &&
-						board[diagonal_kills[i]].nil?
+			elsif move_on_board(current_diag) &&
+						board[move].color != @color &&
+						board[current_diag].nil?
 				#You can jump over an opponent pice to
 				#and empty square
 				moves << diagonal_kills[i]

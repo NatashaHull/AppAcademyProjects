@@ -1,19 +1,88 @@
-require './checkers_player_errors.rb'
-
 class Player
+	attr_reader :color
+
 	def initialize(color)
 		@color = color
 		@last_move_pos = nil
 	end
 
 	def move(board)
+		#Runs if the players don't have this method
+		raise "Not defined"
+	end
+
+	def move_again(board)
+		#Runs if the players don't have this method
+		raise "Not defined"
+	end
+end
+
+class ComputerPlayer < Player
+	def move(board)
+		#Finds all the pieces that belong to this player
+		all_pieces = board.rows.flatten.compact
+
+		my_pieces = all_pieces.select do |piece|
+			piece.color == @color
+		end
+
+		#Gets all the possible (valid) moves
+		moves = []
+
+		my_pieces.each do |piece|
+			piece.moves(board).each do |possible_move|
+				move = [piece.pos, possible_move]
+				p "I might be able to make this move #{move}"
+				moves << move if board.valid_move?(move)
+			end
+		end
+
+		p "My moves are #{moves}"
+
+		select_move(moves)
+	end
+
+	def move_again(board)
+		#Uses the last position it moved to to find
+		#its current possible moves.
+		possible_moves = board[@last_move_pos].moves(board)
+
+		
+		possible_moves.map! do |move|
+			[@last_move_pos, move]
+		end
+
+		possible_moves.select! do |move|
+			board.valid_move?(move)
+		end
+
+		select_move(possible_moves)
+	end
+
+	private
+		def select_move(moves)
+			#Selects an available move at random
+			start_pos, end_pos = moves.sample
+
+			#Assings the end position to the last_move_pos
+			#variable so that the computer knows the last
+			#position it moved to.
+			@last_move_pos = end_pos
+
+			[start_pos, end_pos]
+		end
+end
+
+
+class HumanPlayer < Player
+	def move(board)
 		begin
-			start_pos = get_start_position
-			end_pos = get_end_position
+			start_pos = get_start_position(board)
+			end_pos = get_end_position(board)
 
 			#Checks to make sure that the move is valid
-			check_move(start_pos, end_pos)
-		rescue Error => e
+			check_move(board, start_pos, end_pos)
+		rescue ArgumentError => e
 			puts e.message
 			retry
 		end
@@ -30,11 +99,11 @@ class Player
 		interp_last_move_pos += (@last_move_pos[0] - 1).to_s
 		begin
 			puts "You can move the piece now at #{interp_last_move_pos}"
-			end_pos = get_end_position
+			end_pos = get_end_position(board)
 
 			#Makes sure the move is valid
-			check_move(@last_move_pos, end_pos)
-		rescue Error => e
+			check_move(board, @last_move_pos, end_pos)
+		rescue ArgumentError => e
 			puts e.message
 			retry
 		end
@@ -50,10 +119,10 @@ class Player
 
 				#Makes sure the player is selecting their
 				#own piece
-				unless board[start_pos].color == @color
-					raise "This is not your piece"
+				unless board[start_pos] && board[start_pos].color == @color
+					raise ArgumentError, "This is not your piece"
 				end
-			rescue StandardError => e
+			rescue ArgumentError => e
 				puts e.message
 				retry
 			end
@@ -65,7 +134,7 @@ class Player
 			begin
 				puts "Where would you like to move your piece?"
 				end_pos = parse_input(board)
-			rescue StandardError => e
+			rescue ArgumentError => e
 				puts e.message
 				retry
 			end
@@ -85,17 +154,17 @@ class Player
 		#Create special errors for these things.
 		def check_input(pos)
 			if !"abcdefgh".include?(pos[0])
-	      raise "Your first input must be a letter between a and h"
+	      raise ArgumentError, "Your first input must be a letter between a and h"
 	    elsif !"12345678".include?(pos[1])
-	      raise "Your second input must be a number between 1 and 8"
+	      raise ArgumentError, "Your second input must be a number between 1 and 8"
 	    elsif pos.length > 2
-	    	raise "Your input must only be a letter and a number"
+	    	raise ArgumentError, "Your input must only be a letter and a number"
 	    end
 		end
 
-		def check_move(start_pos, end_pos)
-			unless board.valid_move?[start_pos, end_pos]
-				raise "This is not a valid move!"
+		def check_move(board, start_pos, end_pos)
+			unless board.valid_move?([start_pos, end_pos])
+				raise ArgumentError, "This is not a valid move!"
 			end
 		end
 end
