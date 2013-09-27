@@ -23,14 +23,7 @@ class Piece
 	end
 
 	def moves(board)
-		#Scale the moves to the location of the piece on
-		#the board
-		scalar = @color == :red ? -1 : 1
-		move_dirs = self.move_dirs
-
-		potential_moves = move_dirs.map do |row, col|
-			[scalar * row, scalar * col]
-		end
+		potential_moves = find_potential_moves
 
 		#Add moves that jump over another piece and kill it
 		diagonal_kills = potential_moves.map do |row, col|
@@ -44,6 +37,7 @@ class Piece
 		#Gets rid of potential moves that step on a piece
 		#Adds moves which kill opponent pieces instead
 		moves = []
+		
 		potential_moves.each_with_index do |move, i|
 			current_diag = diagonal_kills[i]
 			if move_on_board(move) && board[move].nil?
@@ -80,5 +74,16 @@ class Piece
 
 		def apply_vector(square, vector)
 			[square[0]+vector[0], square[1]+vector[1]]
+		end
+
+		def find_potential_moves
+			#Scale the moves to the location of the piece on
+			#the board
+			scalar = @color == :red ? -1 : 1
+			move_dirs = self.move_dirs
+
+			move_dirs.map do |row, col|
+				[scalar * row, scalar * col]
+			end
 		end
 end
