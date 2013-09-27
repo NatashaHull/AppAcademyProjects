@@ -37,7 +37,7 @@ class Piece
 		#Gets rid of potential moves that step on a piece
 		#Adds moves which kill opponent pieces instead
 		moves = []
-		
+
 		potential_moves.each_with_index do |move, i|
 			current_diag = diagonal_kills[i]
 			if move_on_board(move) && board[move].nil?

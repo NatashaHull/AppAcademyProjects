@@ -7,12 +7,10 @@ class Player
 	end
 
 	def move(board)
-		#Runs if the players don't have this method
 		raise "Not defined"
 	end
 
 	def move_again(board)
-		#Runs if the players don't have this method
 		raise "Not defined"
 	end
 end
@@ -58,14 +56,8 @@ class ComputerPlayer < Player
 
 	private
 		def select_move(moves)
-			#Selects an available move at random
 			start_pos, end_pos = moves.sample
-
-			#Assings the end position to the last_move_pos
-			#variable so that the computer knows the last
-			#position it moved to.
 			@last_move_pos = end_pos
-
 			[start_pos, end_pos]
 		end
 end
@@ -148,7 +140,6 @@ class HumanPlayer < Player
 	    pos
 		end
 
-		#Create special errors for these things.
 		def check_input(pos)
 			if !"abcdefgh".include?(pos[0])
 	      raise ArgumentError, "Your first input must be a letter between a and h"
