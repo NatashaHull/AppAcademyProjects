@@ -31,3 +31,7 @@ Kenny Chandrasekera
 **Week 2, Days 2 and 3 (W2D2-3)**
 
 Jennifer Hamon
+
+**Week 2, Day 4 (W1D4)**
+
+Solo Day
