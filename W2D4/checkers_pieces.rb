@@ -17,16 +17,12 @@ class Piece
 		potential_dirs = [[1,-1], [1,1]]
 
 		#Allows the kings to move backward diagonally
-		potential_dirs += [[-1,-1], [1,-1]] if @king
+		potential_dirs += [[-1,-1], [-1,1]] if @king
 
 		potential_dirs
 	end
 
 	def moves(board)
-		#Need to make sure you don't kill your own piece
-		#Need to handle multiple moves.
-
-
 		#Scale the moves to the location of the piece on
 		#the board
 		scalar = @color == :red ? -1 : 1

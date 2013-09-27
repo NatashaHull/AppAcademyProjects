@@ -32,12 +32,9 @@ class ComputerPlayer < Player
 		my_pieces.each do |piece|
 			piece.moves(board).each do |possible_move|
 				move = [piece.pos, possible_move]
-				p "I might be able to make this move #{move}"
 				moves << move if board.valid_move?(move)
 			end
 		end
-
-		p "My moves are #{moves}"
 
 		select_move(moves)
 	end

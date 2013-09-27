@@ -37,7 +37,8 @@ class Board
 
 		#Handles promotion to king
 		if destination_coord[0] == 0 ||
-				destination_coord[0] == 7
+				destination_coord[0] == 7 &&
+				!piece.king
 			piece.king = true
 
 			#You cannot move again right after
