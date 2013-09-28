@@ -32,6 +32,10 @@ Kenny Chandrasekera
 
 Jennifer Hamon
 
-**Week 2, Day 4 (W1D4)**
+**Week 2, Day 4 (W2D4)**
 
 Solo Day
+
+**Week 2, Day 5 (W2D5)**
+
+David Bai
