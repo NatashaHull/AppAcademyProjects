@@ -9,8 +9,8 @@ Below is a list of pair programming partners and the projects the project we wor
 Partner: Nathan Holland
 
 Projects include:
-  *[Towers of Hanoi](https://github.com/NatashaHull/AppAcademyProjects/blob/master/W1D1-Exercises-Projects/hanoi.rb)
-  
+
+* [Towers of Hanoi](https://github.com/NatashaHull/AppAcademyProjects/blob/master/W1D1-Exercises-Projects/hanoi.rb)
 * Maze Solver
 
 **Week 1, Day 2 (W1D2)**
@@ -20,7 +20,6 @@ Partner: Ben Hass
 Projects include:
 
 * Students and Courses
-  
 * Tic-Tac-Toe
 
 **Week 1, Day 3 (W1D3)**
@@ -30,9 +29,7 @@ Partner: Yu Heng Kang
 Projects include:
 
 * Mastermind
-  
 * Hangman
-  
 * 8 Queens (Started, but not finished)
 
 **Week 1, Day 4 (W1D4)**
@@ -42,9 +39,7 @@ Solo Day
 Projects include:
 
 * Binary Search
-  
 * Merge Sort
-  
 * Word Chains
 
 **Week 1, Day 5 (W1D5)**
@@ -54,7 +49,6 @@ Partner: Chris Evans
 Projects include:
 
 * Knight's Travails
-  
 * Tic-Tac-Toe AI
 
 **Week 2, Day 1 (W2D1)**
