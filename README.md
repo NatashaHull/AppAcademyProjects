@@ -9,10 +9,9 @@ Below is a list of pair programming partners and the projects the project we wor
 Partner: Nathan Holland
 
 Projects include:
-
   *[Towers of Hanoi](https://github.com/NatashaHull/AppAcademyProjects/blob/master/W1D1-Exercises-Projects/hanoi.rb)
   
-  *Maze Solver
+* Maze Solver
 
 **Week 1, Day 2 (W1D2)**
 
@@ -20,9 +19,9 @@ Partner: Ben Hass
 
 Projects include:
 
-  *Students and Courses
+* Students and Courses
   
-  *Tic-Tac-Toe
+* Tic-Tac-Toe
 
 **Week 1, Day 3 (W1D3)**
 
@@ -30,11 +29,11 @@ Partner: Yu Heng Kang
 
 Projects include:
 
-  *Mastermind
+* Mastermind
   
-  *Hangman
+* Hangman
   
-  *8 Queens (Started, but not finished)
+* 8 Queens (Started, but not finished)
 
 **Week 1, Day 4 (W1D4)**
 
@@ -42,11 +41,11 @@ Solo Day
 
 Projects include:
 
-  *Binary Search
+* Binary Search
   
-  *Merge Sort
+* Merge Sort
   
-  *Word Chains
+* Word Chains
 
 **Week 1, Day 5 (W1D5)**
 
@@ -54,9 +53,9 @@ Partner: Chris Evans
 
 Projects include:
 
-  *Knight's Travails
+* Knight's Travails
   
-  *Tic-Tac-Toe AI
+* Tic-Tac-Toe AI
 
 **Week 2, Day 1 (W2D1)**
 
@@ -64,7 +63,7 @@ Partner: Kenny Chandrasekera
 
 Projects include:
 
-  *Minesweeper
+* Minesweeper
   
 **Week 2, Days 2 and 3 (W2D2-3)**
 
@@ -72,7 +71,7 @@ Partner: Jennifer Hamon
 
 Projects include:
 
-  *Chess
+* Chess
 
 **Week 2, Day 4 (W2D4)**
 
@@ -80,7 +79,7 @@ Solo Day
 
 Projects include:
 
-  *Checkers
+* Checkers
 
 **Week 2, Day 5 (W2D5)**
 
@@ -88,4 +87,4 @@ Partner: David Bai
 
 Projects include:
 
-  *Poker
+* Poker
