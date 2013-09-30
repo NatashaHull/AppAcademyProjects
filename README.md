@@ -2,7 +2,7 @@ AppAcademyProjects
 ==================
 To see my own thoughts about much of this code and the days surrounding my creating it, check out the corrensponding tumblr blog: http://natashaaareflection.tumblr.com/
 
-Below is a list of pair programming partners and the projects the project we worked on together.
+Below is a list of pair programming partners and some of the projects we worked on together.
 
 **Week 1, Day 1 (W1D1)**
 
@@ -82,3 +82,11 @@ Partner: David Bai
 Projects include:
 
 * Poker
+
+**Week 3, Day 1 (W3D1)**
+
+Partner: Chambers, Joseph
+
+Projects include:
+
+* SQLZoo Tutorial
