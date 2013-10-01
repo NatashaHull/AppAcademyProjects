@@ -89,4 +89,4 @@ Partner: Chambers, Joseph
 
 Projects include:
 
-* SQLZoo Tutorial
+* SQLZoo Tutorial (No code supplied)
