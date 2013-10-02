@@ -4,7 +4,7 @@ To see my own thoughts about much of this code and the days surrounding my creat
 
 Below is a list of pair programming partners and some of the projects we worked on together.
 
-**Week 1, Day 1 ([W1D1])**
+**Week 1, Day 1 (W1D1)**
 
 Partner: Nathan Holland
 
