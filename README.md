@@ -85,8 +85,16 @@ Projects include:
 
 **Week 3, Day 1 (W3D1)**
 
-Partner: Chambers, Joseph
+Partner: Joseph Chambers
 
 Projects include:
 
 * SQLZoo Tutorial (No code supplied)
+
+**Week 3, Day 1 (W3D2)**
+
+Partner: Kyle Craft
+
+Projects include:
+
+* App Academy Questions (An Object Relationshional Mapping Project)
