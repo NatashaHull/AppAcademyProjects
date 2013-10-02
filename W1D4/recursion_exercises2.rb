@@ -30,6 +30,8 @@ p fibonacci_recursive(1)
 p fibonacci_recursive(2)
 p fibonacci_recursive(20)
 
+
+#Binary Search
 def bsearch(arr, target)
   if arr.empty?
     puts "Value not in array"
