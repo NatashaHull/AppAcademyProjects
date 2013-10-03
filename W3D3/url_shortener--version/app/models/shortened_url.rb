@@ -25,21 +25,9 @@ class ShortenedUrl < ActiveRecord::Base
 
   has_many :tags, :through => :taggings, :source => :tag
 
-  # Possibly less efficient version
-  # def user_not_a_spammer
-  #   submits_in_last_minute = ShortenedUrl.select do |url|
-  #     (Time.now - url.created_at).to_i <= 10.minute &&
-  #     url.submitter_id == submitter_id
-  #   end
-  #
-  #   if submits_in_last_minute.count >= 5
-  #     errors[:spammer] << "User is a spammer"
-  #   end
-  # end
-
   def user_not_a_spammer
-    submits_in_last_minute = ShortenedUrl.where(
-    "submitter_id = ? AND (strftime('%s', 'now') - strftime('%s', created_at) < 60)", 2)
+    range = ((Time.now - 2.minutes)..Time.now)
+    submits_in_last_minute = ShortenedUrl.where(:submitter_id => submitter_id, :created_at => range)
 
     if submits_in_last_minute.count > 5
       errors[:spammer] << "User is a spammer"
