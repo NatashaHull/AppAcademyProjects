@@ -91,10 +91,19 @@ Projects include:
 
 * SQLZoo Tutorial (No code supplied)
 
-**Week 3, Day 1 (W3D2)**
+**Week 3, Day 2 (W3D2)**
 
 Partner: Kyle Craft
 
 Projects include:
 
 * App Academy Questions (An Object Relationshional Mapping Project)
+ 
+**Week 3, Day 3 (W3D3)**
+
+Partner: Daphne Johnson
+
+Projects include:
+
+* Course Enrollments (Models and database migrations only)
+* Url Shortener (Models, database migrations and a command-line script only)
