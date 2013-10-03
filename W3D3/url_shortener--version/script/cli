@@ -1,0 +1,70 @@
+def run_loop
+  #Finds the user
+  puts "Input your email:"
+  email = gets.chomp
+  user = User.find_by_email(email)
+  user ||= User.create!( {:email => email })
+  #Asks the user what to either visit or create a url
+  while true
+    puts "What would you like to do?"
+    puts "0. Create a shortened URL"
+    puts "1. Visit the shortened URL"
+    puts "2. Get most popular URLs"
+    directions = gets.chomp
+    case directions
+    when "0"
+      create_url(user)
+    when '1'
+      visit_url(user)
+    when "2"
+      get_popular_links
+    else
+      puts "That is invalid!"
+    end
+  end
+end
+
+def create_url(user)
+  puts "Type in your long URL"
+  long_url = gets.chomp
+  url = ShortenedUrl.create_for_user_long_url!(user, long_url)
+  puts "Short url is: #{url.short_url}"
+  tag_url(url)
+end
+
+def tag_url(url)
+  tags = TagTopic.pluck(:tag_name)
+  puts "Please select one of the following tags for your URL: \n"
+  puts tags
+  tag = gets.chomp
+  if tags.include?(tag)
+    Tagging.create!( {:tag_id => 1 + tags.index(tag), :shortened_url_id => url.id} )
+  else
+    puts "Tag doesn't exist!"
+  end
+end
+
+def visit_url(user)
+  puts 'Type in your shortened URL'
+  short_url = gets.chomp
+  url = ShortenedUrl.find_by_short_url(short_url)
+  Launchy.open( url.long_url) do |exception|
+    puts "Attempted to open #{url.long_url} and failed because #{exception}"
+  end
+  Visit.record_visit!(user, url)
+end
+
+def get_popular_links
+  tags = TagTopic.pluck(:tag_name)
+  puts "\nPlease select one of the following tags for your URL: \n"
+  puts tags
+  tag_name = gets.chomp
+  if tags.include?(tag_name)
+    tag = TagTopic.find_by_tag_name(tag_name)
+    puts tag.most_popular_links(5)
+  else
+    puts "Tag doesn't exist!"
+  end
+end
+
+run_loop
