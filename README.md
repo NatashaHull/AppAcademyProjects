@@ -107,3 +107,11 @@ Projects include:
 
 * Course Enrollments (Models and database migrations only)
 * Url Shortener (Models, database migrations and a command-line script only)
+
+**Week 3, Day 4 (W3D4)**
+
+Partner: Chris Evans
+
+Projects include:
+
+* Poll App (Models and database migrations only)
