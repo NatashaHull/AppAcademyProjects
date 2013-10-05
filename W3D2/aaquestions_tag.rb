@@ -37,7 +37,9 @@ class Tag < AAQuestionsTable
         INNER JOIN question_tags ON question_tags.tag_id = t.id
         INNER JOIN questions q1 ON question_tags.question_id = q1.id
       GROUP BY t.id, q1.id
-      ORDER BY (SELECT COUNT(*) FROM question_likes WHERE question_likes.question_id = q1.id) DESC
+      ORDER BY (SELECT COUNT(*)
+                FROM question_likes ql
+                WHERE ql.question_id = q1.id) DESC
       LIMIT ?
     SQL
   end
