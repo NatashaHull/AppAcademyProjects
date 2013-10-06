@@ -97,7 +97,7 @@ Partner: Kyle Craft
 
 Projects include:
 
-* App Academy Questions (An Object Relationshional Mapping Project)
+* [App Academy Questions](https://github.com/NatashaHull/AppAcademyProjects/tree/master/W3D2) (An Object Relationshional Mapping Project)
  
 **Week 3, Day 3 (W3D3)**
 
