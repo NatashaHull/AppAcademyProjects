@@ -25,12 +25,16 @@ describe "associatable" do
 
     class House < SQLObject
       set_table_name("houses")
-      my_attr_accessible(:id, :address, :house_id)
+      my_attr_accessible(:id, :address)
+
+      has_many :humans
+      has_many_through :cats, :humans, :cats
     end
   end
 
   let(:cat) { Cat.find(1) }
   let(:human) { Human.find(1) }
+  let(:house) { House.find(1) }
 
   describe "#belongs_to" do
     it "adds association as method" do
@@ -51,6 +55,26 @@ describe "associatable" do
 
     it "adds an association that returns correct type" do
       human.cats.first.should be_instance_of(Cat)
+    end
+  end
+
+  describe "#has_one_through" do
+    it "adds association as method" do
+      cat.methods.should include(:house)
+    end
+
+    it "adds an association that returns the correct type" do
+      cat.house.should be_instance_of(House)
+    end
+  end
+
+  describe "#has_many_through" do
+    it "adds association as method" do
+      house.methods.should include(:cats)
+    end
+
+    it "adds an association that returns the correct type" do
+      house.cats.first.should be_instance_of(Cat)
     end
   end
 end
