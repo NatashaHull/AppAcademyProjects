@@ -15,6 +15,6 @@ module Searchable
   		WHERE #{keys.join(" AND ")}
   	SQL
 
-  	results.map { |result| self.new(result) }
+  	parse_all(results)
   end
 end

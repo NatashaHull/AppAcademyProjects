@@ -6,6 +6,7 @@ require 'active_support/inflector'
 
 class SQLObject < MassObject
   extend Searchable
+  extend Associatable
 
   def self.set_table_name(table_name)
     @table_name = table_name
@@ -25,7 +26,7 @@ class SQLObject < MassObject
       FROM #{table_name}
     SQL
 
-    members.map { |member| self.new(member) }
+    parse_all(members)
   end
 
   def self.find(id)
@@ -66,8 +67,8 @@ class SQLObject < MassObject
     end
 
     def update
-      #This selects out all the keys that are
-      #defined for this instance.
+      #This selects out all the keys that and
+      #interpolates them into sql
       updates = self.class.attributes.map do |attr_name|
         "#{attr_name} = ?" 
       end

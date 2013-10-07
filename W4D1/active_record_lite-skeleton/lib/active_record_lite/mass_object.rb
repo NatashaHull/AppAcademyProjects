@@ -15,11 +15,12 @@ class MassObject
   end
 
   def self.parse_all(results)
+    results.map { |member| self.new(member) }
   end
 
   def initialize(params = {})
   	attrs = self.class.attributes
-  	params.each do |attr_name, value|
+    params.each do |attr_name, value|
       if attrs.include?(attr_name.to_sym)
   			send("#{attr_name}=", value)
       else
