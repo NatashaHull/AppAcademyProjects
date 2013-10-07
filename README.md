@@ -115,3 +115,11 @@ Partner: Chris Evans
 Projects include:
 
 * Poll App (Models and database migrations only)
+
+**Week 4, Day 1 (W4D1)**
+
+Solo Day
+
+Projects include:
+
+* Active Record Light
