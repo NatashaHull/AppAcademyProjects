@@ -49,7 +49,7 @@ class SQLObject < MassObject
       keys = self.class.attributes
       vals = attribute_values
       
-      q_marks = (["?"] * values.length).join(", ")
+      q_marks = (["?"] * vals.length).join(", ")
 
       #Inserts the new values into SQL
       DBConnection.execute(<<-SQL, vals)
