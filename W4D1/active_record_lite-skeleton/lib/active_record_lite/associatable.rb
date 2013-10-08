@@ -97,7 +97,8 @@ module Associatable
     end
   end
 
-  #Notice that this is a special case of has_many_through, ie #belongs_to => #belongs_to
+  #Notice that this is a special case of has_many_through,
+  #ie #belongs_to => #belongs_to
   def has_one_through(name, assoc1, assoc2)
     define_method(name) do
       #Finds the necessary middle query info
