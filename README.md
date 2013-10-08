@@ -123,3 +123,12 @@ Solo Day
 Projects include:
 
 * Active Record Light
+
+**Week 3, Day 4 (W3D4)**
+
+Partner: Varun Mangla
+
+Projects include:
+
+* Ice Cream Finder
+* Twitter Client
