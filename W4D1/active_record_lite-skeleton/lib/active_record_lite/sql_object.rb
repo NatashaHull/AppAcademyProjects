@@ -13,11 +13,7 @@ class SQLObject < MassObject
   end
 
   def self.table_name
-    unless @table_name
-      @table_name = self.underscore.pluralize
-    end
-
-    @table_name
+    @table_name || self.underscore.pluralize
   end
 
   def self.all
@@ -30,13 +26,13 @@ class SQLObject < MassObject
   end
 
   def self.find(id)
-    member = DBConnection.execute(<<-SQL, id).first
+    member = DBConnection.execute(<<-SQL, id)
       SELECT *
       FROM #{table_name}
       WHERE id = ?
     SQL
 
-    self.new(member)
+    parse_all(member)[0]
   end
 
   def save

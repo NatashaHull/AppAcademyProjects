@@ -3,8 +3,7 @@ require 'active_support/inflector'
 require_relative './db_connection.rb'
 
 class AssocParams
-  attr_reader :name, :primary_key, :foreign_key,
-              :other_table_name
+  attr_reader :name, :primary_key, :foreign_key
 
   def initialize(name, params)
     @name = name.to_s
@@ -38,6 +37,10 @@ class BelongsToAssocParams < AssocParams
     @foreign_key =
       params[:foreign_key] || "#{name}_id"
   end
+
+  def type
+    :belongs_to
+  end
 end
 
 class HasManyAssocParams < AssocParams
@@ -49,15 +52,22 @@ class HasManyAssocParams < AssocParams
     @foreign_key =
       params[:foreign_key] || "#{@current_class_name}_id"
   end
+
+  def type
+    :has_many
+  end
 end
 
 module Associatable
   def assoc_params
+    @assoc_params ||= {}
     @assoc_params
   end
 
   def belongs_to(name, params = {})
     assoc = BelongsToAssocParams.new(name, params)
+    assoc_params[name] = assoc
+    
     define_method(name) do
       parent = DBConnection.execute(<<-SQL)
         SELECT t1.*
@@ -68,14 +78,12 @@ module Associatable
 
       assoc.other_class.parse_all(parent)[0]
     end
-
-    #Stores the association for future use
-    @assoc_params = {} if @assoc_params.nil?
-    @assoc_params[name] = assoc
   end
 
   def has_many(name, params = {})
     assoc = HasManyAssocParams.new(name, params, self)
+    assoc_params[name] = assoc
+
     define_method(name) do
       
       children = DBConnection.execute(<<-SQL)
@@ -87,10 +95,6 @@ module Associatable
 
       assoc.other_class.parse_all(children)
     end
-    
-    #Stores the association for future use
-    @assoc_params = {} if @assoc_params.nil?
-    @assoc_params[name] = assoc
   end
 
   #Notice that this is a special case of has_many_through, ie #belongs_to => #belongs_to
