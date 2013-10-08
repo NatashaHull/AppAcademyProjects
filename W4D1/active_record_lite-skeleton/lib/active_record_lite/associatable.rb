@@ -3,16 +3,8 @@ require 'active_support/inflector'
 require_relative './db_connection.rb'
 
 class AssocParams
-  def other_class
-  end
-
-  def other_table
-  end
-end
-
-class BelongsToAssocParams < AssocParams
   attr_reader :name, :primary_key, :foreign_key,
-              :other_class, :other_table_name
+              :other_table_name
 
   def initialize(name, params)
     @name = name.to_s
@@ -20,11 +12,15 @@ class BelongsToAssocParams < AssocParams
       params[:class_name] || @name.camelcase
     @primary_key =
       params[:primary_key] || "id"
-    @foreign_key =
-      params[:foreign_key] || "#{name}_id"
-    @other_class = @other_class_name
-    @other_table_name = @other_class_name
     convert_to_s
+  end
+
+  def other_class
+    @other_class_name.constantize
+  end
+
+  def other_table_name
+    other_class.table_name
   end
 
   def convert_to_s
@@ -32,40 +28,26 @@ class BelongsToAssocParams < AssocParams
     @primary_key = @primary_key.to_s
     @foreign_key = @foreign_key.to_s
   end
+end
 
-  def type
-    @other_class = @other_class.constantize
-    @other_table_name = @other_class.table_name
+class BelongsToAssocParams < AssocParams
+  def initialize(name, params)
+    super(name, params)
+    @other_class_name =
+      params[:class_name] || @name.camelcase
+    @foreign_key =
+      params[:foreign_key] || "#{name}_id"
   end
 end
 
 class HasManyAssocParams < AssocParams
-  attr_reader :name, :primary_key, :foreign_key,
-              :other_class, :other_table_name
-
   def initialize(name, params, self_class)
-    @name = name.to_s
+    super(name, params)
     @current_class_name = self_class.to_s.underscore
     @other_class_name =
       params[:class_name] || @name.singularize.camelcase
-    @primary_key =
-      params[:primary_key] || "id"
     @foreign_key =
       params[:foreign_key] || "#{@current_class_name}_id"
-    @other_class = @other_class_name
-    @other_table_name = @other_class_name
-    convert_to_s
-  end
-
-  def convert_to_s
-    @other_class_name = @other_class_name.to_s
-    @primary_key = @primary_key.to_s
-    @foreign_key = @foreign_key.to_s
-  end
-
-  def type
-    @other_class = @other_class.constantize
-    @other_table_name = @other_class.table_name
   end
 end
 
@@ -77,8 +59,6 @@ module Associatable
   def belongs_to(name, params = {})
     assoc = BelongsToAssocParams.new(name, params)
     define_method(name) do
-      assoc.type
-
       parent = DBConnection.execute(<<-SQL)
         SELECT t1.*
         FROM #{assoc.other_table_name} AS t1
@@ -97,7 +77,6 @@ module Associatable
   def has_many(name, params = {})
     assoc = HasManyAssocParams.new(name, params, self)
     define_method(name) do
-      assoc.type
       
       children = DBConnection.execute(<<-SQL)
         SELECT t1.*
@@ -143,27 +122,12 @@ module Associatable
       #Finds the necessary middle query info
       assoc_params = self.class.assoc_params
       first_params = assoc_params[assoc1]
-      
-      #Formats the other_table_name and other_class they aren't formatted already
-      first_params.type
-
-      #Finishes params setup before join setup
       middle_class = first_params.other_class
       second_params = middle_class.assoc_params[assoc2]
 
-      #Sets the first join to either return has_many or belongs_to data
-      if second_params.class == HasManyAssocParams
-        join1 = "t1.#{second_params.foreign_key} = t2.#{second_params.primary_key}"
-      else
-        join1 = "t1.#{second_params.primary_key} = t2.#{second_params.foreign_key}"
-      end
-
-      #Sets the second join to either return has_many or belongs_to data
-      if second_params.class == HasManyAssocParams
-        join2 = "t2.#{first_params.foreign_key} = t3.#{first_params.primary_key}"
-      else
-        join2 = "t2.#{first_params.primary_key} = t3.#{first_params.foreign_key}"
-      end
+      #Sets each join statement to either return has_many or belongs_to data
+      join1 = self.class.generate_join_statement(second_params, 't1', 't2')
+      join2 = self.class.generate_join_statement(first_params, 't2', 't3')
 
       #Executes the query given the information above
       grand_something = DBConnection.execute(<<-SQL)
@@ -176,6 +140,15 @@ module Associatable
       SQL
 
       second_params.other_class.parse_all(grand_something)
+    end
+  end
+
+
+  def generate_join_statement(assoc_params,t1, t2)
+    if assoc_params.class == HasManyAssocParams
+      "#{t1}.#{assoc_params.foreign_key} = #{t2}.#{assoc_params.primary_key}"
+    else
+      "#{t1}.#{assoc_params.primary_key} = #{t2}.#{assoc_params.foreign_key}"
     end
   end
 end
