@@ -85,7 +85,6 @@ module Associatable
     assoc_params[name] = assoc
 
     define_method(name) do
-      
       children = DBConnection.execute(<<-SQL)
         SELECT t1.*
         FROM #{assoc.other_table_name} AS t1
