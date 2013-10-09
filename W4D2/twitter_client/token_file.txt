@@ -1,0 +1,73 @@
+--- !ruby/object:OAuth::AccessToken
+token: 1947923262-KiW7pPwtZhCTbVnyXGQgODZ51LjCQhsjmCFBEQ8
+secret: PkfwxJQaX7A5hQLqmFilncoIE1TYeoVCXLoVTqX8
+consumer: !ruby/object:OAuth::Consumer
+  key: MTOdtSdCjT2G2xlgP0WLQ
+  secret: DJvgOI6zrCUpiaw0mRU4QInfIB7Og4YUdNrZYEydFLw
+  options:
+    :signature_method: HMAC-SHA1
+    :request_token_path: /oauth/request_token
+    :authorize_path: /oauth/authorize
+    :access_token_path: /oauth/access_token
+    :proxy: 
+    :scheme: :header
+    :http_method: :post
+    :oauth_version: '1.0'
+    :site: https://twitter.com
+  http_method: :post
+  http: !ruby/object:Net::HTTP
+    address: twitter.com
+    port: 443
+    curr_http_version: '1.1'
+    no_keepalive_server: false
+    close_on_empty_response: false
+    socket: 
+    started: false
+    open_timeout: 30
+    read_timeout: 30
+    continue_timeout: 
+    debug_output: 
+    use_ssl: true
+    ssl_context: !ruby/object:OpenSSL::SSL::SSLContext
+      cert: 
+      key: 
+      client_ca: 
+      ca_file: 
+      ca_path: 
+      timeout: 
+      verify_mode: 0
+      verify_depth: 
+      verify_callback: 
+      options: 4095
+      cert_store: 
+      extra_chain_cert: 
+      client_cert_cb: 
+      tmp_dh_callback: 
+      session_id_context: 
+      session_get_cb: 
+      session_new_cb: 
+      session_remove_cb: 
+      servername_cb: 
+    enable_post_connection_check: true
+    compression: 
+    sspi_enabled: false
+    ssl_version: 
+    key: 
+    cert: 
+    ca_file: 
+    ca_path: 
+    cert_store: 
+    ciphers: 
+    verify_mode: 0
+    verify_callback: 
+    verify_depth: 
+    ssl_timeout: 
+params:
+  :oauth_token: 1947923262-KiW7pPwtZhCTbVnyXGQgODZ51LjCQhsjmCFBEQ8
+  oauth_token: 1947923262-KiW7pPwtZhCTbVnyXGQgODZ51LjCQhsjmCFBEQ8
+  :oauth_token_secret: PkfwxJQaX7A5hQLqmFilncoIE1TYeoVCXLoVTqX8
+  oauth_token_secret: PkfwxJQaX7A5hQLqmFilncoIE1TYeoVCXLoVTqX8
+  :user_id: '1947923262'
+  user_id: '1947923262'
+  :screen_name: i_johndoe
+  screen_name: i_johndoe
