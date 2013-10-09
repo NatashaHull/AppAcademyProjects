@@ -124,7 +124,7 @@ Projects include:
 
 * Active Record Light
 
-**Week 3, Day 4 (W3D4)**
+**Week 4, Day 2 (W4D2)**
 
 Partner: Varun Mangla
 
@@ -132,3 +132,11 @@ Projects include:
 
 * Ice Cream Finder
 * Twitter Client
+
+**Week 4, Day 3 (W4D3)**
+
+Partner: Danielle Levinson
+
+Projects include:
+
+* Routes and Controllers Contact API (JSON only)
