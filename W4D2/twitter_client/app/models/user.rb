@@ -47,12 +47,13 @@ class User < ActiveRecord::Base
     if twitter_api_lookup_ids.empty?
       return existing_users
     else
-      p request = Addressable::URI.new(
+      request = Addressable::URI.new(
         :scheme => "https",
         :host => "api.twitter.com",
         :path => "1.1/users/lookup.json",
         :query_values => { :user_id => "#{twitter_api_lookup_ids.join(",")}" }
       ).to_s
+
       twitter_params = TwitterSession.get(request)
       twitter_users_json = JSON.parse(twitter_params)
       twitter_users = twitter_users_json.map do |twitter_user|
@@ -72,7 +73,14 @@ class User < ActiveRecord::Base
   end
 
   def fetch_followers
-    #follower_ids = something_url_request
+    request = Addressable::URI.new(
+        :scheme => "https",
+        :host => "api.twitter.com",
+        :path => "1/followers/ids.json",
+        :query_values => { :user_id => "#{twitter_api_lookup_ids.join(",")}" }
+      ).to_s
+
+    follower_ids = request["ids"]
     User.fetch_by_ids(follower_ids)
   end
 
