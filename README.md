@@ -122,7 +122,7 @@ Solo Day
 
 Projects include:
 
-* Active Record Light
+* [Active Record Light](https://github.com/NatashaHull/AppAcademyProjects/tree/master/W4D1)
 
 **Week 4, Day 2 (W4D2)**
 
