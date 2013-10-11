@@ -1,0 +1,25 @@
+<h1><%= @cat.name %></h1>
+<h2>This cat was born on: <%= @cat.birth_date %></h2>
+
+<ul>
+  <li>Age: <%= @cat.age %></li>
+  <li>Color: <%= @cat.color %></li>
+  <li>Gender:
+    <%= @cat.gender == "M" ? "Male" : "Female" %>
+  </li>
+</ul>
+
+<h2>Requests for <%= @cat.name %>:</h2>
+<ul>
+  <% @cat.rentals.order("start_date").each do |rental| %>
+    <% unless rental.status == "DENIED" %>
+      <%= render 'rental', :rental => rental, :cat => @cat %>
+    <% end %>
+  <% end %>
+</ul>
+
+<%= button_to "Rent #{@cat.name}", new_cat_rental_url, :method => :get %>
+</br>
+
+<%= link_to '99 Cats Home', root_url %>
+<%= link_to "Edit #{@cat.name}", edit_cat_url(@cat) %>

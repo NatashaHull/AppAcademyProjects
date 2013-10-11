@@ -1,0 +1,12 @@
+<h1>Edit your information</h1>
+
+<form action="<%= user_url(@user) %>" method="POST" accept-charset="utf-8">
+	<input type="hidden" name="authenticity_token"
+	       value="<%= form_authenticity_token %>">
+	<%= render 'shared/form', :user => @user %>
+
+	<label for="new_password">New password: </label>
+	<input type="password" name="user[new_password]" value="" id="new_password">
+
+	<p><input type="submit" value="Confirm Changes"></p>
+</form>

@@ -1,0 +1,9 @@
+<li>Start Date: <%= rental.start_date %>,
+  End Date <%= rental.end_date %>
+  <% if rental.status == "PENDING" %>
+    <% if rental.status == "PENDING" && current_user.id == cat.id %>
+      <%= button_to "Approve", cat_rental_approve_url(rental) %>
+      <%= button_to "Deny", cat_rental_deny_url(rental) %>
+    <% end %>
+  <% end %>
+</li>
