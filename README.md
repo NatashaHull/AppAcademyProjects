@@ -140,3 +140,11 @@ Partner: Danielle Levinson
 Projects include:
 
 * Routes and Controllers Contact API (JSON only)
+ 
+**Week 4, Day 4 (W4D4)**
+
+Partner: Jennifer Hamon
+
+Projects include:
+
+* 99 Cats
