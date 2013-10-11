@@ -148,3 +148,11 @@ Partner: Jennifer Hamon
 Projects include:
 
 * 99 Cats
+
+**Week 4, Day 5 (W4D5)**
+
+Partner: Joshua Foster
+
+Projects include:
+
+* 99 Cats (with Authentication and Users)
