@@ -15,13 +15,15 @@ class CatRentalsController < ApplicationController
     end
   end
 
-  def update
-    @cat_rental = CatRental.find(params[:id])
-    if params[:status] == "approve"
-      @cat_rental.approve!
-    else
-      @cat_renal.deny!
-    end
+  def approve
+    @cat_rental = CatRental.find(params[:cat_rental_id])
+    @cat_rental.approve!
+    redirect_to cat_url(@cat_rental.cat_id)
+  end
+
+  def deny
+    @cat_rental = CatRental.find(params[:cat_rental_id])
+    @cat_rental.deny!
     redirect_to cat_url(@cat_rental.cat_id)
   end
 end

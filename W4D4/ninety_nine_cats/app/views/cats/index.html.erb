@@ -10,7 +10,9 @@
       <td><%= link_to cat.name, cat %></td>
       <td><%= cat.age %></td>
       <td><%= cat.color %></td>
-      <td><%= cat.gender %></td>
+      <td>
+        <%= cat.gender == "M" ? "Male" : "Female" %>
+      </td>
     </tr>
   <% end %>
 </table>

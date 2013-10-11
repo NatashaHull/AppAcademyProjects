@@ -4,7 +4,9 @@
 <ul>
   <li>Age: <%= @cat.age %></li>
   <li>Color: <%= @cat.color %></li>
-  <li>Gender: <%= @cat.gender %></li>
+  <li>Gender: 
+    <%= @cat.gender == "M" ? "Male" : "Female" %>
+  </li>
 </ul>
 
 <h2>Requests for <%= @cat.name %>:</h2>
@@ -14,15 +16,8 @@
       <li>Start Date: <%= rental.start_date %>,
         End Date <%= rental.end_date %>
         <% if rental.status == "PENDING" %>
-          <form action="<%= cat_rental_url(rental) %>" method="post">
-            <input type="hidden" name="_method" value="put">
-            <input type="hidden" name="status" value="approve">
-            <input type="submit" value="Approve this request">
-          </form>
-          <form action="<%= cat_rental_url(rental) %>" method="post">
-            <input type="hidden" name="_method" value="put">
-            <input type="hidden" name="status" value="deny">
-            <input type="submit" value="Deny this request">
+          <%= button_to "Approve this request", cat_rental_approve_url(rental) %>
+          <%= button_to "Deny this request", cat_rental_deny_url(rental) %>
           </form>
         <% end %>
       </li>
