@@ -1,0 +1,37 @@
+<h1><%= @cat.name %></h1>
+<h2>This cat was born on: <%= @cat.birth_date %></h2>
+
+<ul>
+  <li>Age: <%= @cat.age %></li>
+  <li>Color: <%= @cat.color %></li>
+  <li>Gender: <%= @cat.gender %></li>
+</ul>
+
+<h2>Requests for <%= @cat.name %>:</h2>
+<ul>
+  <% @cat.rentals.each do |rental| %>
+    <% unless rental.status == "DENIED" %>
+      <li>Start Date: <%= rental.start_date %>,
+        End Date <%= rental.end_date %>
+        <% if rental.status == "PENDING" %>
+          <form action="<%= cat_rental_url(rental) %>" method="post">
+            <input type="hidden" name="_method" value="put">
+            <input type="hidden" name="status" value="approve">
+            <input type="submit" value="Approve this request">
+          </form>
+          <form action="<%= cat_rental_url(rental) %>" method="post">
+            <input type="hidden" name="_method" value="put">
+            <input type="hidden" name="status" value="deny">
+            <input type="submit" value="Deny this request">
+          </form>
+        <% end %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+
+<%= button_to "Rent #{@cat.name}", new_cat_rental_url, :method => :get %>
+</br>
+
+<%= link_to '99 Cats Home', root_url %>
+<%= link_to "Edit #{@cat.name}", edit_cat_url(@cat) %>
