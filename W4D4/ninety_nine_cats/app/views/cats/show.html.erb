@@ -11,16 +11,9 @@
 
 <h2>Requests for <%= @cat.name %>:</h2>
 <ul>
-  <% @cat.rentals.each do |rental| %>
+  <% @cat.rentals.order("start_date").each do |rental| %>
     <% unless rental.status == "DENIED" %>
-      <li>Start Date: <%= rental.start_date %>,
-        End Date <%= rental.end_date %>
-        <% if rental.status == "PENDING" %>
-          <%= button_to "Approve this request", cat_rental_approve_url(rental) %>
-          <%= button_to "Deny this request", cat_rental_deny_url(rental) %>
-          </form>
-        <% end %>
-      </li>
+      <%= render 'rental', :rental => rental %>
     <% end %>
   <% end %>
 </ul>

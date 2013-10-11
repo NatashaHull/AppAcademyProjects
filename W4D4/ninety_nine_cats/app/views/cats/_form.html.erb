@@ -2,32 +2,50 @@
 <input type="text" id="cat_name" name="cat[name]" value="<%= @cat.name %>">
 </br>
 
-<label for="cat_birth_date">Birthdate:</label>
+<label for="cat_birth_date">
+	Birthdate:
+</label>
 <input type="date" id="cat_birth_date" name="cat[birth_date]" value="<%= @cat.birth_date %>">
 </br>
 
 
-<label for="cat_age">Age:</label>
+<label for="cat_age">
+	Age:
+</label>
 <input type="text" id="cat_age" name="cat[age]" value="<%= @cat.age %>">
 </br>
 
-<label for="cat_color">Color:</label>
+<label for="cat_color">
+	Color:
+</label>
 <select name="cat[color]" id="cat_color">
   <option value=""></option>
   <option value="brown" <%= "selected" if @cat.color == "brown" %>>Brown</option>
   <option value="black" <%= "selected" if @cat.color == "black" %>>Black</option>
-  <option value="white" <%= "selected" if @cat.color == "white" %>>White</option>
-  <option value="grey" <%= "selected" if @cat.color == "grey" %>>Grey</option>
-  <option value="orange" <%= "selected" if @cat.color == "orange" %>>Orange</option>
+  <option value="white" <%= "selected" if @cat.color == "white" %>>
+  	White
+  </option>
+  <option value="grey" <%= "selected" if @cat.color == "grey" %>>
+  	Grey
+  </option>
+  <option value="orange" <%= "selected" if @cat.color == "orange" %>>
+  	Orange
+  </option>
 </select>
 </br>
 
-<label for="cat_gender">Gender:</label>
+<label for="cat_gender">
+	Gender:
+</label>
 </br>
 <input type="radio" id="cat_gender_male" name="cat[gender]" value="M" <%= 'checked' if @cat.gender == "M" %>>
-<label for="cat_gender_male">Male</label>
+<label for="cat_gender_male">
+	Male
+</label>
 </br>
 
 <input type="radio" id="cat_gender_female" name="cat[gender]" value="F" <%= "checked" if @cat.gender == "F" %>>
-<label for="cat_gender_female">Female</label>
+<label for="cat_gender_female">
+	Female
+</label>
 </br>
