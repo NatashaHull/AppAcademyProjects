@@ -7,11 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 u1 = User.new(:username => "Josh", :password => "josh")
-u1.reset_session_token!
 u1.save!
 
 u2 = User.new(:username => "Natasha", :password => "joshiscool")
-u2.reset_session_token!
 u2.save!
 
 a = Cat.new(:name => "Gizmo", :age => 2, :birth_date => "01/03/2011",

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :logged_in?, :only => [:edit, :update]
+  before_filter :logged_in?, :only => [:edit, :update, :show]
 
   def show
     @cats = current_user.cats

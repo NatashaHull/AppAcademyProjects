@@ -10,7 +10,7 @@ module SessionsHelper
   end
 
   def logout_session!(session)
-    session.destroy!
+    session.destroy
   end
 
   def current_user

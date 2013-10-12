@@ -28,7 +28,7 @@ class SessionsController < ApplicationController
   #Destroys one session for a user
   def logout_session
     logout_session!(@session_token)
-    redirect_to user_url(current_user)
+    redirect_to user_url
   end
 
   private
