@@ -4,10 +4,10 @@
 	<% @users.each do |user| %>
     <li>Name: 
       <%= user.name %> 
-      <%= if current_user.followed_users.include?(user) %>
-        <%= button_to following_url, :method => :delete %>
+      <% if current_user.followed_users.include?(user) %>
+        <%= button_to "Unfollow", following_url, :method => :delete %>
       <% else %>
-        <%= button_to following_url, :method => :post %>
+        <%= button_to "Follow", following_url, :method => :post %>
       <% end %>
     </li>
   <% end %>

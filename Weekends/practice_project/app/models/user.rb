@@ -1,15 +1,15 @@
 class User < ActiveRecord::Base
-  attr_accessible :name, :username
+  attr_accessible :name, :username, :password
 
   validates_presence_of :name, :username, :password_digest, :session_token
   validates :username, :uniqueness => true
 
   has_many :inbound_follows,
-           :class_name => 'Follows',
+           :class_name => 'Follow',
            :foreign_key => :follower_id
 
   has_many :outbound_follows,
-           :class_name => 'Follows',
+           :class_name => 'Follow',
            :foreign_key => :followee_id
 
   has_many :followers, :through => :inbound_follows, :source => :follower
@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
 
   def self.find_by_credentials(username, password)
     user = User.find_by_username(username)
-    return user if user.is_password?(password_digest)
+    return user if user.is_password?(password)
     nil
   end
 
@@ -28,15 +28,15 @@ class User < ActiveRecord::Base
   end
 
   def set_session_token
-    self.session_token = SecureRandom.urlsafe_64(16)
+    self.session_token = SecureRandom.urlsafe_base64(16)
   end
 
   def password=(raw_password)
-    self.password_digest = BCrypt.Password.create(raw_password)
+    self.password_digest = BCrypt::Password.create(raw_password)
   end
 
   def is_password?(pass)
-    p = BCrypt.Password.new(self.password_digest)
+    p = BCrypt::Password.new(self.password_digest)
     p.is_password?(pass)
   end
 end
