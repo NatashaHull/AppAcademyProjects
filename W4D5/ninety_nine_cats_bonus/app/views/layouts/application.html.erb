@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>99Cats</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<% if flash.now[:errors] %>
+	  <% flash[:errors].each do |error| %>
+	    <%= error %><br />
+		<% end %>
+	<% end %>
+
+	<% if current_user %>
+	  <div><p>Hi <%= current_user.username %></p>
+			<%= button_to "Log out", session_url, :method => :delete %>
+		</div>
+
+	<% else %>
+		<div>
+	  	<%= button_to "Log in", new_session_url, :method => :get %>
+			<%= button_to "Sign up!", new_user_url, :method => :get %>
+		</div>
+	<% end %>
+
+	<%= yield %>
+
+</body>
+</html>

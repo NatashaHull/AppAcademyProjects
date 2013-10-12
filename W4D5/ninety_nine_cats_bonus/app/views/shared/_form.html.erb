@@ -1,0 +1,13 @@
+<% if user.persisted? %>
+  <input type="hidden" name="_method" value="PUT">
+<% end %>
+
+<label for="username">Username: </label>
+<input type="text" name="user[username]"
+       value="<%= user.username %>" id="username">
+</br>
+
+<label for="password">Password: </label>
+<input type="password" name="user[password]"
+       value="" id="password">
+</br>

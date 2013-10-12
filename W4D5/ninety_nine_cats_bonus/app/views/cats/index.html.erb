@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Color</th>
+    <th>Gender</th>
+  </tr>
+  <% @cats.each do |cat| %>
+    <tr>
+      <td><%= link_to cat.name, cat %></td>
+      <td><%= cat.age %></td>
+      <td><%= cat.color %></td>
+      <td>
+        <%= cat.gender == "M" ? "Male" : "Female" %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Create a new cat!', new_cat_url %>

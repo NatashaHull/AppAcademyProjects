@@ -1,0 +1,41 @@
+<h1>Profile Page</h1>
+
+<h2>My Cats</h2>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Color</th>
+    <th>Gender</th>
+  </tr>
+  <% @cats.each do |cat| %>
+    <tr>
+      <td><%= link_to cat.name, cat %></td>
+      <td><%= cat.age %></td>
+      <td><%= cat.color %></td>
+      <td>
+        <%= cat.gender == "M" ? "Male" : "Female" %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<h2>My Sessions</h2>
+<ul>
+	<% @sessions.each do |token| %>
+	  <li>
+			Device:
+	  	<%= token.device %>
+			IP:
+			<%= token.ip %>
+			<form action="<%= logout_user_session_url %>"
+				method="post" accept-charset="utf-8">
+				<input type="hidden" name="_method" value="delete">
+				<input type="hidden" name="session_id" value="<%= token.id %>">
+				<p><input type="submit" value="Delete This Session"></p>
+			</form>
+	  </li>
+	<% end %>
+</ul>
+
+<%= link_to 'Create a new cat!', new_cat_url %>
