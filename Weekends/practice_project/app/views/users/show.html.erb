@@ -1,0 +1,19 @@
+<h1>Profile</h1>
+
+<h2>Followers</h2>
+<ul>
+  <% @user.followers.each do |follower| %>
+    <li>Name: 
+      <%= follower.name %>
+    </li>
+  <% end %>
+</ul>
+
+<h3>Followees</h3>
+<ul>
+  <% @user.followed_users.each do |followee| %>
+    <li>Name: 
+      <%= followee.name %>
+    </li>
+  <% end %>
+</ul>

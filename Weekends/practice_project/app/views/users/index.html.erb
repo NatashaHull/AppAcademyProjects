@@ -1,0 +1,14 @@
+<h1>Users</h1>
+
+<ul>
+	<% @users.each do |user| %>
+    <li>Name: 
+      <%= user.name %> 
+      <%= if current_user.followed_users.include?(user) %>
+        <%= button_to following_url, :method => :delete %>
+      <% else %>
+        <%= button_to following_url, :method => :post %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

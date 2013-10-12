@@ -1,0 +1,8 @@
+<h1>Sign in</h1>
+
+<form action="<%= session_url %>" method="post">
+	
+  <%= render 'shared/form', :user => @user %>
+
+  <input type="submit" value="Sign in">
+</form>

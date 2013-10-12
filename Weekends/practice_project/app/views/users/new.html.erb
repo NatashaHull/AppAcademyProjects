@@ -1,0 +1,11 @@
+<h1>Sign up</h1>
+
+<form action="<%= users_url %>" method="post">  
+  <label for="name">Name</label>
+  <input type="text" name="user[name]" id="name" value="<%= @user.name %>">
+  </br>
+    
+  <%= render 'shared/form', :user => @user %>
+
+  <input type="submit" value="Sign up">
+</form>
