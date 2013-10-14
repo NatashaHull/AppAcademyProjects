@@ -4,8 +4,8 @@ MusicApp::Application.routes.draw do
   resources :users do
     collection do
       get 'activate' #Should potentially be a put or post
-      # put 'admin' #For creating admins
     end
+    # put 'admin' #For creating admins
   end
   
   resources :bands do

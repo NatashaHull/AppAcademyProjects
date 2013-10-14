@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
     self.save!
   end
 
-  # def make_admin
+  # def make_admin!
   #   self.admin = true
   #   self.save!
   # end

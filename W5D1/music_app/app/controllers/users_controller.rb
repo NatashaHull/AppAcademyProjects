@@ -42,4 +42,10 @@ class UsersController < ApplicationController
       redirect_to new_user_url
     end
   end
+
+  # def admin
+  #   @user = User.find(params[:id])
+  #   @user.make_admin!
+  #   redirect_to users_url
+  # end
 end
