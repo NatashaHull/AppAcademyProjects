@@ -1,0 +1,49 @@
+class User < ActiveRecord::Base
+  attr_accessible :email, :password
+
+  after_create :set_session_token, :set_activation_token
+  validates_presence_of :email, :session_token, :activation_token
+  validates :password_digest,
+            :presence => { :message => "Password can't be blank"}
+
+  has_many :notes
+
+  def self.find_by_credentials(email, pass)
+    user = User.find_by_email(email)
+    return user if user.is_password?(pass)
+    nil
+  end
+
+  def password=(raw_pass)
+    #Only sets the password_digest if there is a password
+    unless raw_pass.blank?
+      self.password_digest = BCrypt::Password.create(raw_pass)
+    end
+  end
+
+  def is_password?(pass)
+    p = BCrypt::Password.new(self.password_digest)
+    p.is_password?(pass)
+  end
+
+  def activate!
+    self.activated = true
+    self.save!
+  end
+
+  def reset_session_token!
+    self.set_session_token
+    self.save!
+    self.session_token
+  end
+
+  private
+
+    def set_session_token
+      self.session_token = SecureRandom.urlsafe_base64(16)
+    end
+
+    def set_activation_token
+      self.activation_token = SecureRandom.urlsafe_base64(16)
+    end
+end
