@@ -3,7 +3,7 @@ MusicApp::Application.routes.draw do
   
   resources :users do
     collection do
-      get 'activation' #Should potentially be a put or post
+      get 'activate' #Should potentially be a put or post
     end
   end
   
@@ -20,4 +20,6 @@ MusicApp::Application.routes.draw do
   end
 
   resources :notes, :only => [:destroy]
+
+  root :to => 'bands#index'
 end

@@ -1,4 +1,6 @@
 class BandsController < ApplicationController
+  before_filter :logged_in?, :activated?
+
   def index
     @bands = Band.all
   end

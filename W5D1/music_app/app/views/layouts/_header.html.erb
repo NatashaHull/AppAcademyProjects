@@ -3,5 +3,5 @@
   <%= button_to "Sign Out", session_url, :method => :delete %>
 <% else %>
   <%= button_to "Log In", new_session_url %>
-  <%= button_to "Register", new_user_url %>
+  <%= button_to "Register", new_user_url, :method => :get %>
 <% end %>

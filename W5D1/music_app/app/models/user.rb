@@ -1,8 +1,9 @@
 class User < ActiveRecord::Base
   attr_accessible :email, :password
 
-  before_validation :set_session_token, :set_activation_token
-  validates_presence_of :email, :session_token, :activation_token
+  before_validation :set_session_token
+  validates :email, :presence => true, :uniqueness => true
+  validates :session_token, :activation_token, :presence => true
   validates :password_digest,
             :presence => { :message => "Password can't be blank"}
 
@@ -10,7 +11,7 @@ class User < ActiveRecord::Base
 
   def self.find_by_credentials(email, pass)
     user = User.find_by_email(email)
-    return user if user.is_password?(pass)
+    return user if !!user && user.is_password?(pass)
     nil
   end
 
@@ -41,9 +42,7 @@ class User < ActiveRecord::Base
     self.session_token = SecureRandom.urlsafe_base64(16)
   end
 
-  private
-
-    def set_activation_token
-      self.activation_token = SecureRandom.urlsafe_base64(16)
-    end
+  def set_activation_token
+    self.activation_token = SecureRandom.urlsafe_base64(16)
+  end
 end

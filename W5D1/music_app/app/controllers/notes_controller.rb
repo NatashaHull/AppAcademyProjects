@@ -1,5 +1,5 @@
 class NotesController < ApplicationController
-  before_filter :logged_in?
+  before_filter :logged_in?, :activated?
   before_filter :owned_by_current_user?, :only => [:destroy]
 
   def create
