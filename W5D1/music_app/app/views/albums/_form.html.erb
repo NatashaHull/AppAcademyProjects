@@ -4,6 +4,7 @@
 <label for="album_name">Name</label>
 <input type="text" name="album[name]" value="<%= album.name %>"
        id="album_name">
+</br>
 
 <label for="album_band">Band</label>
 <select name="album[band_id]" id="album_band">
@@ -14,3 +15,15 @@
     </option>
   <% end %>
 </select>
+</br>
+
+<label for"album_recording_type">How was this Recorded?</label>
+</br>
+<input type="radio" name="album[recording_type]"
+       value="studio" id="album_recording_studio">
+<label for"album_recording_studio">Studio</label>
+</br>
+<input type="radio" name="album[recording_type]"
+       value="live" id="album_recording_live">
+<label for"album_recording_live">Live</label>
+</br>

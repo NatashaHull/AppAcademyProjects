@@ -6,7 +6,7 @@
        id="track_name">
 </br>
 
-<label for="track_album">Band</label>
+<label for="track_album">Album</label>
 <select name="track[album_id]" id="track_album">
   <% albums.each do |album| %>
     <option value="<%= album.id %>"
@@ -15,6 +15,16 @@
     </option>
   <% end %>
 </select>
+</br>
+
+<label for="track_type">Type</label>
+<input type="radio" name="track[track_type]" value="regular"
+       id="track_type_regular">
+<label for="track_type_regular">Regular Track</label>
+<input type="radio" name="track[track_type]" value="bonus"
+       id="track_type_bonus">
+<label for="track_type_bonus">Bonus Track</label>
+</br>
 
 <p>Lyrics</p>
 <textarea name="track[lyrics]" rows="10" cols="20">

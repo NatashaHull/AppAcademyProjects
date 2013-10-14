@@ -1,0 +1,25 @@
+<h2>Notes</h2>
+<ul>
+  <% track.notes.each do |note| %>
+    <li>
+      <p><%= note.body %></p>
+      <p>By: <%= note.user %></p>
+      <% if !!current_user && current_user = note.user %>
+        <%= button_to "Delete", note, :method => :delete %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+
+<form action="<%= track_notes_url(track) %>" method="post">
+  <input type="hidden" name="authenticity_token"
+         value="<%= form_authenticity_token %>">
+
+  <textarea name="body" rows="10" cols="20">
+    <%= new_note.body %>
+  </textarea>
+  </br>
+
+  <input type="submit" value="Add Note">
+</form>
+</br>

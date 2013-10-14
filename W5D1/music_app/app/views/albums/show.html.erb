@@ -1,4 +1,7 @@
 <h1><%= @album.name %></h1>
+<% if @album.recording_type %>
+  <p><%= @album.recording_type.capitalize %> Recording</p>
+<% end %>
 
 <h2>Band</h2>
 <p><%= link_to @album.band.name, band_url(@album.band_id) %></p>

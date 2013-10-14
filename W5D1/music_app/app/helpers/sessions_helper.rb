@@ -4,7 +4,7 @@ module SessionsHelper
   end
 
   def logged_in?
-    if !!current_user
+    unless !!current_user
       redirect_to new_session_url
     end
   end

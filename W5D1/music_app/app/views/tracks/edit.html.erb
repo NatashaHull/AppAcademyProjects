@@ -2,7 +2,7 @@
 <form action="<%= track_url(@track) %>" method="post">
   <input type="hidden" name="_method" value="put">
 
-  <%= render 'form', :track => @track, :albums => @album %>
+  <%= render 'form', :track => @track, :albums => @albums %>
 
   <input type="submit" value="Update Track">
 </form>

@@ -1,4 +1,7 @@
 <h1><%= @track.name %></h1>
+<% if @track.track_type %>
+  <p><%= @track.track_type.capitalize %> Track</p>
+<% end %>
 
 <h2>Band</h2>
 <p><%= link_to @track.album.band.name,
@@ -11,18 +14,7 @@
 <%= show_lyrics(@track.lyrics) %>
 </br>
 
-<h2>Notes</h2>
-<ul>
-  <% @track.notes.each do |note| %>
-    <li>
-      <p><%= note.body %></p>
-      <p>By: <%= note.user %></p>
-      <% if !!current_user && current_user = note.user %>
-    </li>
-  <% end %>
-</ul>
-
-<form action=""></form>
+<%= render 'notes/notes', :track => @track, :new_note => @note %>
 
 <%= link_to "View all Tracks for this Album",
             album_tracks_url(@track.album_id) %> |
