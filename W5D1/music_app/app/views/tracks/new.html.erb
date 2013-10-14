@@ -1,2 +1,7 @@
-<h1>Tracks#new</h1>
-<p>Find me in app/views/tracks/new.html.erb</p>
+<h1>Create Track</h1>
+<form action="<%= album_tracks_url(@track.album_id) %>" method="post">
+
+  <%= render 'form', :track => @track, :albums => @albums %>
+
+  <input type="submit" value="Create Track">
+</form>

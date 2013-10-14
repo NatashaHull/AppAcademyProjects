@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   attr_accessible :email, :password
 
-  after_create :set_session_token, :set_activation_token
+  before_validation :set_session_token, :set_activation_token
   validates_presence_of :email, :session_token, :activation_token
   validates :password_digest,
             :presence => { :message => "Password can't be blank"}
@@ -37,11 +37,11 @@ class User < ActiveRecord::Base
     self.session_token
   end
 
-  private
+  def set_session_token
+    self.session_token = SecureRandom.urlsafe_base64(16)
+  end
 
-    def set_session_token
-      self.session_token = SecureRandom.urlsafe_base64(16)
-    end
+  private
 
     def set_activation_token
       self.activation_token = SecureRandom.urlsafe_base64(16)

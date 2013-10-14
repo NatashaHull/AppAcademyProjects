@@ -10,7 +10,7 @@ module SessionsHelper
   end
 
   def login_user!(user)
-    session[:token] = self.reset_session_token!
+    session[:token] = user.reset_session_token!
   end
 
   def logout_user!(user)

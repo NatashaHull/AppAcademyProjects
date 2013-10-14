@@ -16,6 +16,8 @@ MusicApp::Application.routes.draw do
   end
   
   resources :tracks, :except => [:index, :new, :create] do
-    resources :notes, :only => [:create, :destroy]
+    resources :notes, :only => [:create]
   end
+
+  resources :notes, :only => [:destroy]
 end

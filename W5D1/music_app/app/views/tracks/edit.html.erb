@@ -1,2 +1,8 @@
-<h1>Tracks#edit</h1>
-<p>Find me in app/views/tracks/edit.html.erb</p>
+<h1>Update Track</h1>
+<form action="<%= track_url(@track) %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <%= render 'form', :track => @track, :albums => @album %>
+
+  <input type="submit" value="Update Track">
+</form>

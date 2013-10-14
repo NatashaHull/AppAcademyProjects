@@ -1,8 +1,9 @@
 class Track < ActiveRecord::Base
-  attr_accessible :name
+  attr_accessible :name, :album_id, :lyrics
 
-  validates :name, :album_id, :presence => true
+  validates_presence_of :name, :album_id, :lyrics
 
-  belongs_to :album
+  belongs_to :album, :dependent => :destroy
+  
   has_many :notes
 end

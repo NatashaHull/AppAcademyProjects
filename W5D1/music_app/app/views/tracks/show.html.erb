@@ -1,2 +1,29 @@
-<h1>Tracks#show</h1>
-<p>Find me in app/views/tracks/show.html.erb</p>
+<h1><%= @track.name %></h1>
+
+<h2>Band</h2>
+<p><%= link_to @track.album.band.name,
+               band_url(@track.album.band_id) %></p>
+
+<h2>Album</h2>
+<p><%= link_to @track.album.name, album_url(@track.album_id) %></p>
+
+<h2>Lyrics</h2>
+<%= show_lyrics(@track.lyrics) %>
+</br>
+
+<h2>Notes</h2>
+<ul>
+  <% @track.notes.each do |note| %>
+    <li>
+      <p><%= note.body %></p>
+      <p>By: <%= note.user %></p>
+      <% if !!current_user && current_user = note.user %>
+    </li>
+  <% end %>
+</ul>
+
+<form action=""></form>
+
+<%= link_to "View all Tracks for this Album",
+            album_tracks_url(@track.album_id) %> |
+<%= link_to "Edit this track", edit_track_url(@track) %>

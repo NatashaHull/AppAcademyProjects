@@ -1,0 +1,16 @@
+<input type="hidden" name="authenticity_token"
+       value="<%= form_authenticity_token %>">
+
+<label for="album_name">Name</label>
+<input type="text" name="album[name]" value="<%= album.name %>"
+       id="album_name">
+
+<label for="album_band">Band</label>
+<select name="album[band_id]" id="album_band">
+  <% bands.each do |band| %>
+    <option value="<%= band.id %>"
+            <%= "selected" if album.band_id == band.id %>>
+      <%= band.name %>
+    </option>
+  <% end %>
+</select>

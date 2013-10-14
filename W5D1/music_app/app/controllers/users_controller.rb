@@ -3,6 +3,10 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def show
+    render :text => current_user.email
+  end
+
   def create
     @user = User.new(params[:user])
     if @user.save

@@ -1,2 +1,8 @@
-<h1>Albums#edit</h1>
-<p>Find me in app/views/albums/edit.html.erb</p>
+<h1>Update Album</h1>
+<form action="<%= album_url(@album) %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <%= render 'form', :album => @album, :bands => @bands %>
+
+  <input type="submit" value="Update Album">
+</form>
