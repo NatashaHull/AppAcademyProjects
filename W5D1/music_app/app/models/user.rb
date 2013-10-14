@@ -32,6 +32,11 @@ class User < ActiveRecord::Base
     self.save!
   end
 
+  # def make_admin
+  #   self.admin = true
+  #   self.save!
+  # end
+
   def reset_session_token!
     self.set_session_token
     self.save!

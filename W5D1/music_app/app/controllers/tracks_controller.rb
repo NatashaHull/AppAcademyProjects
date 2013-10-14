@@ -1,5 +1,6 @@
 class TracksController < ApplicationController
   before_filter :logged_in?, :activated?
+  # before_filter :admin?, :except => [:index, :show]
 
   def index
     @album = Album.find(params[:album_id])
