@@ -1,0 +1,30 @@
+<%= link_to @link.title, @link.url %>
+<%= @link.url %>
+
+<h2>Add Comment</h2>
+<form action="<%= comments_url %>" method="post">
+  <input type="hidden" name="authenticity_token"
+         value="<%= form_authenticity_token %>">
+
+  <input type="hidden" name="comment[link_id]" value="<%= @link.id%>">
+  
+  <input type="textarea" name="comment[content]" id="Comment">
+  <input type="submit" value="Add Comment">
+</form>
+
+<% if @link.comments %>
+  <h2>Comments</h2>
+  <ul>
+    <% @link.comments.each do |comment| %>
+      <li>
+        <%= comment.content %>
+        <%= button_to "Remove Comment", comment_url(comment),
+            :method => :delete %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= link_to "Links", links_url %>
+<%= link_to "Create New Link", new_link_url %>
+<%= link_to "Edit Link", edit_link_url(@link) %>
