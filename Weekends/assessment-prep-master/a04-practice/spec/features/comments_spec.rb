@@ -27,7 +27,7 @@ feature "Adding comments to links" do
   it "validates presence of comment body" do
     make_link("google", "http://google.com")
     click_button 'Add Comment'
-    page.should have_content "Body can't be blank"
+    page.should have_content "Content can't be blank"
   end
 end
 
