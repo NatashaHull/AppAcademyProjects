@@ -130,8 +130,8 @@ Partner: Varun Mangla
 
 Projects include:
 
-* Ice Cream Finder
-* Twitter Client
+* [Ice Cream Finder](https://github.com/NatashaHull/AppAcademyProjects/blob/master/W4D2/ice_cream_finder.rb)
+* [Twitter Client](https://github.com/NatashaHull/AppAcademyProjects/tree/master/W4D2/twitter_client)
 
 **Week 4, Day 3 (W4D3)**
 
@@ -139,7 +139,7 @@ Partner: Danielle Levinson
 
 Projects include:
 
-* Routes and Controllers Contact API (JSON only)
+* [Routes and Controllers Contact API](https://github.com/NatashaHull/AppAcademyProjects/tree/master/W4D3/contacts_api) (JSON only)
  
 **Week 4, Day 4 (W4D4)**
 
@@ -147,7 +147,7 @@ Partner: Jennifer Hamon
 
 Projects include:
 
-* 99 Cats
+* [99 Cats](https://github.com/NatashaHull/AppAcademyProjects/tree/master/W4D4/ninety_nine_cats)
 
 **Week 4, Day 5 (W4D5)**
 
@@ -155,7 +155,7 @@ Partner: Joshua Foster
 
 Projects include:
 
-* 99 Cats (with Authentication and Users)
+* [99 Cats](https://github.com/NatashaHull/AppAcademyProjects/tree/master/W4D5) (with Authentication and Users)
  
 **Week 5, Day 1 (W5D1)**
 
@@ -163,7 +163,7 @@ Solo Day
 
 Projects include:
 
-* Music App (with Mailers and Helper Methods for Views)
+* [Music App](https://github.com/NatashaHull/AppAcademyProjects/tree/master/W5D1/music_app) (with Mailers and Helper Methods for Views)
 
 **Week 5, Day 2 (W5D2)**
 
