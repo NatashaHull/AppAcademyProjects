@@ -156,3 +156,11 @@ Partner: Joshua Foster
 Projects include:
 
 * 99 Cats (with Authentication and Users)
+ 
+**Week 5, Day 1 (W5D1)**
+
+Solo Day
+
+Projects include:
+
+* Music App (with Mailers and Helper Methods for Views)
