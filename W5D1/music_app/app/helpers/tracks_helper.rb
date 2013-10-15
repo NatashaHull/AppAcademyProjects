@@ -1,10 +1,13 @@
 module TracksHelper
   def show_lyrics(lyrics)
-    m_lyrics = h(lyrics).gsub("\r\n", "\r\n&#9835; ")
-    html = "<pre>"
-    html += "&#9835; "
-    html += m_lyrics
-    html += "</pre>"
+    m_lyrics = h(lyrics).split("\r\n")
+    html = "<ul id=\"lyrics\">"
+    m_lyrics.each do |lyric|
+      html += "<li> "
+      html += lyric
+      html += "</li>"
+    end
+    html += "</ul>"
     html.html_safe
   end
 end
