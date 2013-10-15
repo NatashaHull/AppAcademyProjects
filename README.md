@@ -164,3 +164,11 @@ Solo Day
 Projects include:
 
 * Music App (with Mailers and Helper Methods for Views)
+
+**Week 5, Day 2 (W5D2)**
+
+Partner: Christina Austin
+
+Projects include:
+
+* Friends Circle (Nested Forms)
