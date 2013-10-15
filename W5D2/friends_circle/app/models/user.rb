@@ -3,7 +3,8 @@ class User < ActiveRecord::Base
   attr_reader :password
 
   before_validation :set_session_token
-  validates :email, :password_digest, :session_token, :presence => true
+  validates_presence_of :email, :password_digest, :session_token,
+                        :reset_token
   validates :password, :length => { :minimum => 6, :allow_nil => true }
 
   def self.find_by_credentials(user_hash)
@@ -26,7 +27,19 @@ class User < ActiveRecord::Base
     self.session_token
   end
 
+  #The token is for password resets, sadly it causes this method to
+  #have a confusing name
+  def reset_reset_token!
+    self.set_reset_token
+    self.save
+    self.reset_token
+  end
+
   def set_session_token
     self.session_token = SecureRandom.urlsafe_base64(16)
+  end
+
+  def set_reset_token
+    self.reset_token = SecureRandom.urlsafe_base64(16)
   end
 end
