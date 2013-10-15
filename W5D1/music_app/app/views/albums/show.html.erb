@@ -11,18 +11,19 @@
   <% @album.tracks.each do |track| %>
     <li>
       <%= link_to track.name, track %>
-      <%# if current_user.admin %>
-      <%= button_to "Delete this track", track, :method => :delete %>
-      <%# end %>
+      <% if current_user.admin %>
+        <%= button_to "Delete this track", track,
+                      :method => :delete %>
+      <% end %>
     </li>
   <% end %>
 </ul>
 
 <%= link_to "View all Albums for this Band",
             band_albums_url(@album.band_id) %>
-<%# if current_user.admin %>
+<% if current_user.admin %>
  | 
 <%= link_to "Create an Track for this Album",
             new_album_track_url(@album) %> | 
 <%= link_to "Edit this Album", edit_album_url(@album) %>
-<%# end %>
+<% end %>

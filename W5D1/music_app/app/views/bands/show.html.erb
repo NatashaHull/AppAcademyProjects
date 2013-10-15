@@ -5,7 +5,10 @@
   <% @albums.each do |album| %>
     <li>
       <%= link_to album.name, album %>
-      <%= button_to "Delete this Album", album, :method => :delete %>
+      <% if current_user.admin %>
+        <%= button_to "Delete this Album", album,
+                      :method => :delete %>
+      <% end %>
     </li>
   <% end %>
 </ul>
@@ -16,14 +19,19 @@
     <% album.tracks.each do |track| %>
       <li>
         <%= link_to track.name, track %>
-        <%= button_to "Delete this track", track,
-                      :method => :delete %>
+        <% if current_user.admin %>
+          <%= button_to "Delete this track", track,
+                        :method => :delete %>
+        <% end %>
       </li>
     <% end %>
   </ul>
 <% end %>
 
-<%= link_to "View all Bands", bands_url %> | 
-<%= link_to "Create an Album for this Band",
-            new_band_album_url(@band) %> | 
-<%= link_to "Edit this Band", edit_band_url(@band) %>
+<%= link_to "View all Bands", bands_url %>
+<% if current_user.admin  %>
+   | 
+  <%= link_to "Create an Album for this Band",
+              new_band_album_url(@band) %> | 
+  <%= link_to "Edit this Band", edit_band_url(@band) %>
+<% end %>

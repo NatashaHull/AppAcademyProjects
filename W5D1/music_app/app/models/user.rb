@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   validates :password_digest,
             :presence => { :message => "Password can't be blank"}
 
-  has_many :notes
+  has_many :notes, :dependent => :destroy
 
   def self.find_by_credentials(email, pass)
     user = User.find_by_email(email)
@@ -32,10 +32,10 @@ class User < ActiveRecord::Base
     self.save!
   end
 
-  # def make_admin!
-  #   self.admin = true
-  #   self.save!
-  # end
+  def make_admin!
+    self.admin = true
+    self.save!
+  end
 
   def reset_session_token!
     self.set_session_token

@@ -5,4 +5,6 @@
   <% end %>
 </ul>
 
-<%= link_to "Create an Album", new_band_album_url(@band) %>
+<% if current_user.admin %>
+  <%= link_to "Create an Album", new_band_album_url(@band) %>
+<% end %>

@@ -1,6 +1,6 @@
 class TracksController < ApplicationController
   before_filter :logged_in?, :activated?
-  # before_filter :admin?, :except => [:index, :show]
+  before_filter :admin?, :except => [:index, :show]
 
   def index
     @album = Album.find(params[:album_id])
@@ -47,6 +47,6 @@ class TracksController < ApplicationController
   def destroy
     @track = Track.find(params[:id])
     @track.destroy
-    redirect_to tracks_url
+    redirect_to album_tracks_url(@track.album_id)
   end
 end

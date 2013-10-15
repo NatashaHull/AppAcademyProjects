@@ -11,14 +11,14 @@
 <p><%= link_to @track.album.name, album_url(@track.album_id) %></p>
 
 <h2>Lyrics</h2>
-<%= show_lyrics(@track.lyrics) %>
+<%= show_lyrics(@track.lyrics) if @track.lyrics %>
 </br>
 
 <%= render 'notes/notes', :track => @track, :new_note => @note %>
 
 <%= link_to "View all Tracks for this Album",
             album_tracks_url(@track.album_id) %>
-<%# if current_user.admin %>
+<% if current_user.admin %>
  |
-<%= link_to "Edit this track", edit_track_url(@track) %>
-<%# end %>
+  <%= link_to "Edit this track", edit_track_url(@track) %>
+<% end %>

@@ -1,15 +1,16 @@
 class UsersController < ApplicationController
-  # before_filter :admin?, :only => [:index]
+  before_filter :logged_in?, :only => [:index, :show]
+  before_filter :admin?, :only => [:index]
 
-  # def index
-  #   @users = User.all
-  # end
+  def index
+    @users = User.all
+  end
 
   def show
     if current_user.activated
       redirect_to root_url
-    else
-      msg = UserMailer.register(@user)
+    elsif
+      msg = UserMailer.register(current_user)
       msg.deliver!
       render :text => "Welcome #{current_user.email}, you should
                       receive an email to activate your account
@@ -43,9 +44,9 @@ class UsersController < ApplicationController
     end
   end
 
-  # def admin
-  #   @user = User.find(params[:id])
-  #   @user.make_admin!
-  #   redirect_to users_url
-  # end
+  def admin
+    @user = User.find(params[:user_id])
+    @user.make_admin!
+    redirect_to users_url
+  end
 end

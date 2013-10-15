@@ -5,6 +5,6 @@
   <% end %>
 </ul>
 
-<%# if current_user.admin %>
+<% if current_user.admin %>
   <%= link_to "Create a Track", new_album_track_url(@album) %>
-<%# end %>
+<% end %>
