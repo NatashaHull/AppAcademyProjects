@@ -167,7 +167,7 @@ Projects include:
 
 **Week 5, Day 2 (W5D2)**
 
-Partner: Christina Austin
+Solo Day
 
 Projects include:
 
