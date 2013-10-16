@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     @user = User.find_by_credentials(params[:user])
     if @user
       login_user!
-      render :json => @user
+      redirect_to @user
     else
       @user = User.new
       flash.now[:errors] = @user.errors.full_messages

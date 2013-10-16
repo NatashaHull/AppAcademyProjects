@@ -4,7 +4,7 @@ class UsersMailer < ActionMailer::Base
   def reset_email(user)
     @user = user
     @url = reset_password_users_url
-    @url += @user.reset_token
+    @url += "?reset_token=#{@user.reset_token}"
 
     mail(:to => @user.email, :subject => "Rest Password")
   end

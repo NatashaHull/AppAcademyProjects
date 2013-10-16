@@ -1,5 +1,5 @@
 FriendsCircle::Application.routes.draw do
-  resources :users, :only => [:new, :create, :update] do
+  resources :users, :except => [:destroy] do
     collection do
       get 'reset_password_email'
       put 'reset_password_submit'

@@ -1,0 +1,27 @@
+<h1><%= @user.email %></h1>
+
+<h3>Circles</h3>
+<% if @circles %>
+  <ol>
+    <% @circles.each do |circle| %>
+      <li><%= @circle.name %></li>
+      <li>Members: 
+        <ul>
+          <% circle.members.each do |member| %>
+            <li><%= link_to member.email, member %></li>
+          <% end %>
+        </ul>
+      </li>
+    <% end %>
+  </ol>
+<% end %>
+
+<h3>Friends</h3>
+<ul>
+  <% @user.friends.each do |friend| %>
+    <li><%= link_to friend.email, friend %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Create Circle", '/' %> | 
+<%= link_to "Add Friends", '/' %>

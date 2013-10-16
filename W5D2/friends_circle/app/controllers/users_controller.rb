@@ -1,19 +1,32 @@
 class UsersController < ApplicationController
+  before_filter :must_be_logged_in, :only => [:index, :show]
+
+  def index
+    @users = User.all
+  end
+
+  def show
+    @user = User.find(params[:id])
+  end
+
   def new
     @user = User.new
+    @circles = (@user.circles + @user.circle_memberships)
   end
 
   def create
     @user = User.new(params[:user])
+    @user.set_reset_token
     if @user.save
       login_user!
-      render :json => @user
+      redirect_to @user
     else
       flash.now[:errors] = @user.errors.full_messages
       render :new
     end
   end
 
+  #All of the following actions are for password resets
   def reset_password_email
   end
 
@@ -49,15 +62,17 @@ class UsersController < ApplicationController
     end
   end
 
-  def change_password
-    @user.reset_reset_token!
-    session[:reset_token] = nil
-    @user.password = params[:password]
-    if @user.save
-      render :json => @user
-    else
-      flash.now[:errors] = @user.errors.full_messages
-      render :reset_password
+  private
+
+    def change_password
+      @user.reset_reset_token!
+      session[:reset_token] = nil
+      @user.password = params[:password]
+      if @user.save
+        redirect_to @user
+      else
+        flash.now[:errors] = @user.errors.full_messages
+        render :reset_password
+      end
     end
-  end
 end

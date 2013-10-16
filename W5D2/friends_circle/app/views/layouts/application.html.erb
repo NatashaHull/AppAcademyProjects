@@ -7,6 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div>
+    <% if !!current_user %>
+      Hi <%= current_user.email %>
+      <%= button_to "Sign Out", session_url, :method => :delete %>
+    <% else %>
+      <%= button_to "Sign In", new_session_url, :method => :get %>
+      <%= button_to "Sign Up", new_user_url, :method => :get %>
+    <% end %>
+  </div>
+
+  <% if flash[:errors] %>
+    <div>
+      <% flash[:errors].each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </div>
+  <% end %>
 
 <%= yield %>
 

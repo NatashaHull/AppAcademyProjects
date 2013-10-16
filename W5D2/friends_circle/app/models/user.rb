@@ -7,6 +7,26 @@ class User < ActiveRecord::Base
                         :reset_token
   validates :password, :length => { :minimum => 6, :allow_nil => true }
 
+  has_many :inbound_friends,
+           :class_name => "Friend",
+           :foreign_key => :friender_id
+
+  has_many :outbound_friends,
+           :class_name => "Friend",
+           :foreign_key => :friended_id
+
+  has_many :circles
+
+  has_many :circle_memberships
+
+  has_many :friends,
+           :through => :outbound_friends,
+           :source => :friended_user
+
+  has_many :frienders,
+           :through => :inbound_friends,
+           :source => :friender
+
   def self.find_by_credentials(user_hash)
     user = User.find_by_email(user_hash[:email])
     return user if !!user && user.is_password?(user_hash[:password])
@@ -18,7 +38,7 @@ class User < ActiveRecord::Base
   end
 
   def is_password?(pass)
-    BCrypt::Password.new(self.password) == pass
+    BCrypt::Password.new(self.password_digest) == pass
   end
 
   def reset_session_token!
