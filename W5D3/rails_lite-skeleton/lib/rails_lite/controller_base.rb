@@ -49,5 +49,7 @@ class ControllerBase
   end
 
   def invoke_action(name)
+    send(name)
+    render(name) unless already_rendered?
   end
 end
