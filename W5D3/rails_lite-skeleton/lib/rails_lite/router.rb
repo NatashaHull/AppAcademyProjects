@@ -29,7 +29,27 @@ class Route
 
   private
 
-    def extract_params
+    def extract_params(path)
+      data = pattern.match(path)
+      keys = data.names
+      #This should extract the post match data, but doesn't
+      # vals = [data.post_match]
+
+      # keys.each_index do |hash_i|
+      #   route_params[keys[hash_i]] = vals[hash_i]
+      # end
+
+      #This is the hack I'm using to make this work
+      keys.each do |key|
+        shared_parts = pattern.to_s.split("?<#{keys.first}>")
+        val = path
+
+        shared_parts.each do |part|
+          val = val.delete(part)
+        end
+
+        route_params[key.to_sym] = val
+      end
     end
 end
 
