@@ -2,8 +2,11 @@ require 'erb'
 require 'active_support/core_ext'
 require_relative 'params'
 require_relative 'session'
+require_relative 'url_helper'
 
 class ControllerBase
+  include UrlHelper
+
   attr_reader :params
 
   def initialize(req, res, route_params={})
@@ -23,9 +26,9 @@ class ControllerBase
     if already_rendered?
       raise RuntimeError, "Request has already been made"
     end
-    base_url = url.split("http://www.").last
+    base_url = url.split("http://").last
     @res.status = 302
-    @res['location'] = "http://www.#{base_url}"
+    @res['location'] = "http://#{base_url}"
     @already_built_response = true
     session.store_session(@res)
   end

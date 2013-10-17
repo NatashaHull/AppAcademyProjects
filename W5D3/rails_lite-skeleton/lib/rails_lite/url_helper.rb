@@ -1,5 +1,5 @@
 module UrlHelper
-  def create_url_helper(root_url="http://localhost:8080", path)
+  def create_simple_url_helpers(root_url="localhost:8080", path)
     #I am assuming there are not router params for the sake
     #of simplicity
     helper_name = path.split('/').join('_')

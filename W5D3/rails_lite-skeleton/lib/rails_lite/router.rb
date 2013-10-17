@@ -1,3 +1,5 @@
+require_relative 'url_helper'
+
 class Route
   attr_reader :pattern, :http_method, :controller_class, :action_name,
               :route_params
@@ -25,6 +27,15 @@ class Route
   def run(req, res)
     controller = controller_class.new(req, res, route_params)
     controller.invoke_action(action_name)
+  end
+
+  def path
+    path = pattern.to_s.delete("^")
+    path.delete!("$")
+  end
+
+  def simple?
+    !pattern.to_s.include?("(?<")
   end
 
   private
@@ -55,6 +66,7 @@ end
 
 class Router
   attr_reader :routes
+  include UrlHelper
 
   def initialize
     @routes = []
@@ -63,6 +75,9 @@ class Router
   def add_route(pattern, method, controller_class, action_name)
     route = Route.new(pattern, method, controller_class, action_name)
     @routes << route
+    if route.simple?
+      create_simple_url_helpers(route.path)
+    end
   end
 
   def draw(&proc)
