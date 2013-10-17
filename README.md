@@ -172,3 +172,11 @@ Solo Day
 Projects include:
 
 * Friends Circle (Nested Forms)
+
+**Week 5, Day 3 (W5D3)**
+
+Solo Day
+
+Projects include:
+
+* Rails Lite (Routes, Session, Params and Controller Base)
