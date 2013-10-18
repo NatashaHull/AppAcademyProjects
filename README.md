@@ -180,3 +180,19 @@ Solo Day
 Projects include:
 
 * Rails Lite (Routes, Session, Params and Controller Base)
+
+**Week 5, Day 4 (W5D4)**
+
+Partner: Yu Heng Kang
+
+Projects include:
+
+* Reddit Clone (Rspec, Factory-Girl, and Faker)
+
+**Week 5, Day 5 (W5D5)**
+
+Partner: Jessica Kim
+
+Projects include:
+
+* Goal App (Capybara)
