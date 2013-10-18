@@ -1,0 +1,26 @@
+<input type="hidden" name="authenticity_token"
+			 value="<%= form_authenticity_token %>">
+
+<label for="link_title">Title</label>
+	<input type="text" name="link[title]" value="<%= @link.title %>" id="link_title">
+	<br>
+
+<label for="link_url">URL</label>
+	<input type="text" name="link[url]" value="<%= @link.url %>" id="link_url">
+	<br>
+
+<h2>Description</h2>
+<textarea rows="10" cols="20" name="link[description]">
+	<%= @link.description %>
+</textarea>
+<br>
+
+<label for="link_subs"> Subs </label>
+ <input type="hidden" name="link[sub_ids][]" value="" id="link_subs">
+ <br>
+ <% @subs.each do |sub| %>
+ <label for="<%= sub.name %>"><%= sub.name %></label>
+	 <input type="checkbox" name="link[sub_ids][]" value="<%= sub.id %>"
+	 				id="<%= sub.name %>" <%= "checked" if @link.sub_ids.include?(sub.id) %>>
+		<br>
+ <% end %>

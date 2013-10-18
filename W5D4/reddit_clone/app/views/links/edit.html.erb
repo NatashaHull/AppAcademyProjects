@@ -1,0 +1,8 @@
+<h1> Edit link </h1>
+<form action="<%= link_url(@link) %>" method="post" accept-charset="utf-8">
+	<input type="hidden" name="_method" value="put">
+
+	<%= render 'form' %>
+
+	<p><input type="submit" value="Update link"></p>
+</form>

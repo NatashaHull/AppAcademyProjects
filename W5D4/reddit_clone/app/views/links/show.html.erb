@@ -1,0 +1,14 @@
+<h1><%= @link.title %></h1>
+<br>
+<%= @link.description %>
+<br>
+<%= link_to "URL", @link.url %>
+
+<% if !!current_user && @link.owner_id = current_user.id %>
+	<%= link_to "Edit this sub", edit_sub_path(@link) %>
+	<%= link_to "Delete this sub", @link, :method => :delete %>
+<% end %>
+
+<%= link_to 'Reply', new_link_comment_url(@link) %>
+
+<%= render 'comments', :comments => @comments %>

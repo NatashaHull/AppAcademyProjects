@@ -1,0 +1,9 @@
+<div>
+	<% if logged_in? %>
+		Logged in as: <%= current_user.email %>
+		<%= button_to "Log out", session_url, :method => :delete %>
+	<% else %>
+		<%= button_to "Log in", new_session_url, :method => :get %>
+		<%= button_to "Register", new_user_url, :method => :get %>
+	<% end %>
+</div>

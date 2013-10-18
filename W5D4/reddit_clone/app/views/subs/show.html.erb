@@ -1,0 +1,15 @@
+<h1><%= @sub.name %></h1>
+<p><%= link_to "Create a link", new_link_url %></p>
+<ul>
+	<% @sub.links.each do |link| %>
+		<li>
+			<div><%= link_to link.title, link.url %></div>
+			<div><%= link_to "Description", link %></div>
+		</li>
+	<% end %>
+</ul>
+
+<% if @sub.owner_id = current_user.id %>
+	<%= link_to "Edit this sub", edit_sub_path(@sub) %>
+	<%= link_to "Delete this sub", @sub, :method => :delete %>
+<% end %>

@@ -1,0 +1,15 @@
+<ul>
+<% comments.each do |comment| %>
+	<li>
+		<div><%= comment.content %></div>
+		<% respond_link = "#{new_link_comment_url(@link)}?parent_id=\"#{comment.id}\"" %>
+		<div><%= link_to 'Reply', respond_link %></div>
+	</li>
+	</br>
+
+	<% children = @children_hash[comment.id] %>
+	<% unless children.nil? || children.empty? %>
+		<%= render 'comments', :comments => @children_hash[comment.id] %>
+	<% end %>
+<% end %>
+</ul>
