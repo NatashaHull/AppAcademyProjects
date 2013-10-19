@@ -1,0 +1,11 @@
+<h1>User Show Page</h1>
+
+<% @public_goals.each do |goal| %>
+    <%= link_to goal.name, goal %>
+<% end %>
+
+<% if logged_in? && current_user.id == @user.id %>
+    <% @private_goals.each do |goal| %>
+        <%= link_to goal.name, goal %>
+    <% end %>
+<% end %>

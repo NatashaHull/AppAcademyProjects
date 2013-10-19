@@ -1,0 +1,7 @@
+<h1><%= @goal.name %></h1>
+
+<pre><%= @goal.body %></pre>
+
+<% if logged_in? && current_user.id == @goal.user_id %>
+    <%= button_to "Remove Goal", @goal, :method => :delete %>
+<% end %>
