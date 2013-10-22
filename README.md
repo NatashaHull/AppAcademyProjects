@@ -205,3 +205,12 @@ Projects include:
 
 * Binary Search
 * Reversi (Started but not finished)
+
+**Week 6, Day 2 (W6D2)**
+
+Partner: Zuhaerr Mansiv
+
+Projects include:
+
+* Towers of Hanoi
+* Tic-Tac-Toe
