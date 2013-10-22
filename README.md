@@ -196,3 +196,12 @@ Partner: Jessica Kim
 Projects include:
 
 * Goal App (Capybara)
+
+**Week 6, Day 1 (W6D1)**
+
+Partner: David Attarzadeh
+
+Projects include:
+
+* Binary Search
+* Reversi (Started but not finished)
