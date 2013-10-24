@@ -214,3 +214,11 @@ Projects include:
 
 * Towers of Hanoi
 * Tic-Tac-Toe
+
+**Week 6, Day 3 (W6D3)**
+
+Partner: AJ Gregory
+
+Projects include:
+
+* Asteroids Game
