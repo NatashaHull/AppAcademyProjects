@@ -222,3 +222,13 @@ Partner: AJ Gregory
 Projects include:
 
 * Asteroids Game
+ 
+**Week 6, Day 3 (W6D3)**
+
+Partner: Albert Tseng
+
+Projects include:
+
+* Tic Tac Toe (Web interface)
+* Towers of Hanoi (Web interface)
+* Snake Game
