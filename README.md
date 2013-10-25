@@ -4,12 +4,12 @@ To see my own thoughts about much of this code and the days surrounding my creat
 
 Below is a list of pair programming partners and some of the projects we worked on together for the following weeks:
 
-* Week 1
-* Week 2
-* Week 3
-* Week 4
-* Week 5
-* Week 6
+* [Week 1](https://github.com/NatashaHull/AppAcademyProjects/blob/master/README.md#week-1)
+* [Week 2](https://github.com/NatashaHull/AppAcademyProjects/blob/master/README.md#week-2)
+* [Week 3](https://github.com/NatashaHull/AppAcademyProjects/blob/master/README.md#week-3)
+* [Week 4](https://github.com/NatashaHull/AppAcademyProjects/blob/master/README.md#week-4)
+* [Week 5](https://github.com/NatashaHull/AppAcademyProjects/blob/master/README.md#week-5)
+* [Week 6](https://github.com/NatashaHull/AppAcademyProjects/blob/master/README.md#week-6)
 
 ##Week 1
 
@@ -60,6 +60,8 @@ Projects include:
 * [Knight's Travails](https://github.com/NatashaHull/AppAcademyProjects/blob/master/W1D5/knights_travails.rb)
 * [Tic-Tac-Toe AI](https://github.com/NatashaHull/AppAcademyProjects/blob/master/W1D5/tic_tac_toe_ai2.rb)
 
+##Week 2
+
 **Week 2, Day 1 (W2D1)**
 
 Partner: Kenny Chandrasekera
@@ -91,6 +93,8 @@ Partner: David Bai
 Projects include:
 
 * [Poker](https://github.com/NatashaHull/AppAcademyProjects/tree/master/W2D5/Poker)
+
+##Week 3
 
 **Week 3, Day 1 (W3D1)**
 
@@ -124,6 +128,8 @@ Partner: Chris Evans
 Projects include:
 
 * [Poll App](https://github.com/NatashaHull/AppAcademyProjects/tree/master/W3D4/poll_app) (Models and database migrations only)
+
+##Week 4
 
 **Week 4, Day 1 (W4D1)**
 
@@ -165,7 +171,9 @@ Partner: Joshua Foster
 Projects include:
 
 * [99 Cats](https://github.com/NatashaHull/AppAcademyProjects/tree/master/W4D5) (with Authentication and Users)
- 
+
+##Week 5
+
 **Week 5, Day 1 (W5D1)**
 
 Solo Day
@@ -205,6 +213,8 @@ Partner: Jessica Kim
 Projects include:
 
 * Goal App (Capybara)
+
+##Week 7
 
 **Week 6, Day 1 (W6D1)**
 
