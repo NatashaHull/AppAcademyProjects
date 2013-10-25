@@ -110,7 +110,7 @@ Partner: Kyle Craft
 
 Projects include:
 
-* [App Academy Questions](https://github.com/NatashaHull/AppAcademyProjects/tree/master/W3D2) (An Object Relationshional Mapping Project)
+* [App Academy Questions](https://github.com/NatashaHull/AppAcademyProjects/tree/master/Week3/W3D2) (An Object Relationshional Mapping Project)
  
 **Week 3, Day 3 (W3D3)**
 
@@ -118,8 +118,8 @@ Partner: Daphne Johnson
 
 Projects include:
 
-* [Course Enrollments](https://github.com/NatashaHull/AppAcademyProjects/tree/master/W3D3/associations_quiz) (Models and database migrations only)
-* [Url Shortener](https://github.com/NatashaHull/AppAcademyProjects/tree/master/W3D3/url_shortener) (Models, database migrations and a command-line script only)
+* [Course Enrollments](https://github.com/NatashaHull/AppAcademyProjects/tree/master/Week3/W3D3/associations_quiz) (Models and database migrations only)
+* [Url Shortener](https://github.com/NatashaHull/AppAcademyProjects/tree/master/Week3/W3D3/url_shortener) (Models, database migrations and a command-line script only)
 
 **Week 3, Day 4 (W3D4)**
 
@@ -127,7 +127,7 @@ Partner: Chris Evans
 
 Projects include:
 
-* [Poll App](https://github.com/NatashaHull/AppAcademyProjects/tree/master/W3D4/poll_app) (Models and database migrations only)
+* [Poll App](https://github.com/NatashaHull/AppAcademyProjects/tree/master/Week3/W3D4/poll_app) (Models and database migrations only)
 
 ##Week 4
 
