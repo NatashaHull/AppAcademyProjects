@@ -180,7 +180,7 @@ Solo Day
 
 Projects include:
 
-* [Music App](https://github.com/NatashaHull/AppAcademyProjects/tree/master/W5D1/music_app) (with Mailers and Helper Methods for Views)
+* [Music App](https://github.com/NatashaHull/AppAcademyProjects/tree/master/Week5/W5D1/music_app) (with Mailers and Helper Methods for Views)
 
 **Week 5, Day 2 (W5D2)**
 
