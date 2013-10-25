@@ -232,3 +232,11 @@ Projects include:
 * Tic Tac Toe (Web interface)
 * Towers of Hanoi (Web interface)
 * Snake Game
+
+**Week 6, Day 4 (W6D4)**
+
+Partner: Pending
+
+Projects include:
+
+* Secrets Share (with AJAX)
