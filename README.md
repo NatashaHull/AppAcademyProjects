@@ -254,7 +254,7 @@ Projects include:
 
 **Week 6, Day 5 (W6D5)**
 
-Partner: Pending
+Partner: Soon Jae Kwon
 
 Projects include:
 
