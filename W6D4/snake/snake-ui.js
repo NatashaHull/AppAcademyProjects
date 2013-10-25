@@ -39,7 +39,7 @@
     });
     this.timeId = setInterval(function() {
       that.step();
-    }, 350);
+    }, 150);
   };
 
   View.prototype.step = function() {
