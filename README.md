@@ -2,7 +2,16 @@ AppAcademyProjects
 ==================
 To see my own thoughts about much of this code and the days surrounding my creating it, check out the corrensponding tumblr blog: http://natashaaareflection.tumblr.com/
 
-Below is a list of pair programming partners and some of the projects we worked on together.
+Below is a list of pair programming partners and some of the projects we worked on together for the following weeks:
+
+* Week 1
+* Week 2
+* Week 3
+* Week 4
+* Week 5
+* Week 6
+
+##Week 1
 
 **Week 1, Day 1 (W1D1)**
 
