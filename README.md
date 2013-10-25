@@ -223,7 +223,7 @@ Projects include:
 
 * Asteroids Game
  
-**Week 6, Day 3 (W6D3)**
+**Week 6, Day 4 (W6D4)**
 
 Partner: Albert Tseng
 
