@@ -233,7 +233,7 @@ Projects include:
 * Towers of Hanoi (Web interface)
 * Snake Game
 
-**Week 6, Day 4 (W6D4)**
+**Week 6, Day 5 (W6D5)**
 
 Partner: Pending
 
