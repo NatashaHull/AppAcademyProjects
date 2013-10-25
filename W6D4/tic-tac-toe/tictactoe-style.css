@@ -1,0 +1,13 @@
+.game {
+  height: 730px;
+  width: 730px;
+}
+
+.game div {
+  height: 200px;
+  width: 200px;
+  border: 5px dotted black;
+  float: left;
+  text-align: center;
+  font-size: 10.5em;
+}

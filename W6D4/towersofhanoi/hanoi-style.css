@@ -1,0 +1,19 @@
+.highlighted {
+  background-color: #FFFF00;
+}
+
+.game {
+  height: 650px;
+  width: 650px;
+}
+
+.game > div {
+  border: 1px solid black;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  font-size: 2em;
+  padding-top: 40px;
+  color: #8B3626;
+  float: left;
+}

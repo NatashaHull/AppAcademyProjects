@@ -1,0 +1,23 @@
+.game {
+  height: 400px;
+  width: 400px;
+  border: 1px solid black;
+}
+
+.game div {
+  height: 50px;
+  width: 50px;
+  float: left;
+}
+
+.snake {
+  background-color: #BF1919;
+}
+
+.apple {
+  background-color: #5CD65C;
+}
+
+.segment {
+  background-color: #e63f3f;
+}
