@@ -12,7 +12,6 @@ Below is a list of pair programming partners and some of the projects we worked 
 * [Week 6](https://github.com/NatashaHull/AppAcademyProjects/blob/master/README.md#week-6)
 
 ##Week 1
-([Week 1 Repository](https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week1))
 
 **Week 1, Day 1 (W1D1)**
 
@@ -62,7 +61,6 @@ Projects include:
 * [Tic-Tac-Toe AI](https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week1/W1D5/tic_tac_toe_ai2.rb)
 
 ##Week 2
-([Week 2 Repository](https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week2))
 
 **Week 2, Day 1 (W2D1)**
 
@@ -97,7 +95,6 @@ Projects include:
 * [Poker](https://github.com/NatashaHull/AppAcademyProjects/tree/master/Week2/W2D5/Poker)
 
 ##Week 3
-([Week 3 Repository](https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week3))
 
 **Week 3, Day 1 (W3D1)**
 
@@ -133,7 +130,6 @@ Projects include:
 * [Poll App](https://github.com/NatashaHull/AppAcademyProjects/tree/master/Week3/W3D4/poll_app) (Models and database migrations only)
 
 ##Week 4
-([Week 4 Repository](https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week4))
 
 **Week 4, Day 1 (W4D1)**
 
@@ -177,7 +173,6 @@ Projects include:
 * [99 Cats](https://github.com/NatashaHull/AppAcademyProjects/tree/master/Week4/W4D5) (with Authentication and Users)
 
 ##Week 5
-([Week 5 Repository](https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week5))
 
 **Week 5, Day 1 (W5D1)**
 
@@ -220,7 +215,6 @@ Projects include:
 * Goal App (Capybara)
 
 ##Week 6
-([Week 6 Repository](https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week6))
 
 **Week 6, Day 1 (W6D1)**
 
