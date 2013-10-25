@@ -214,7 +214,7 @@ Projects include:
 
 * Goal App (Capybara)
 
-##Week 7
+##Week 6
 
 **Week 6, Day 1 (W6D1)**
 
