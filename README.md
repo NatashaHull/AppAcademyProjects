@@ -19,7 +19,7 @@ Partner: Nathan Holland
 
 Projects include:
 
-* [Towers of Hanoi](https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week1/W1D1-Exercises-Projects/hanoi.rb)
+* [Towers of Hanoi](https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week1/W1D1/hanoi.rb)
 * [Maze Solver](https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week1/W1D1/maze.rb)
 
 **Week 1, Day 2 (W1D2)**
