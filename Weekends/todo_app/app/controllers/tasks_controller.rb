@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   respond_to :json
+  respond_to :html, :only => [:index]
 
   def create
     @task = Task.new(params[:task])
@@ -13,6 +14,9 @@ class TasksController < ApplicationController
 
   def index
     @tasks = Task.all
-    render :json => @tasks
+    respond_to do |format|
+      format.html { render :index } # entry-point for Backbone app
+      format.json { render :json => @tasks }
+    end
   end
 end
