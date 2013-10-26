@@ -1,0 +1,17 @@
+<form action="<%= user_friendships_url(@user) %>" method="post" accept-charset="utf-8">
+  <input type="hidden" name="authenticity_token"
+         value="<%= form_authenticity_token %>">
+
+  <label for="friendship_friendee">Who would you like to friend?</label>
+  </br>
+  <select name="secret[friendee_id]" id="secret_friendee">
+   <option></option>
+   <% User.all.each do |friendee| %>
+     <option value="<%= friendee.id %>">
+       <%= friendee.username %>
+     </option>
+   <% end %>
+  </select>
+
+  <p><input type="submit" value="Friend!"></p>
+</form>

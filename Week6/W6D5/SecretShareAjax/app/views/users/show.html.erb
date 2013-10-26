@@ -1,0 +1,27 @@
+<h1><%= @user.username %></h1>
+
+<% if @user != current_user %>
+<div class="friend-buttons">
+  <span class='<%= "cant-press" if !@friendship %>'>
+    <button type="button" class="unfriend" data-friendee-id="<%= @user.id %>">
+      Unfriend this User!
+    </button>
+  </span>
+
+  <span class='<%= "cant-press" if !!@friendship %>'>
+    <button type="button" class="friend" data-friendee-id="<%= @user.id %>">
+      Friend this User!
+    </button>
+  </span>
+</div>
+<% end %>
+
+
+<h2>Secrets</h2>
+<ul>
+  <% @user.received_secrets.each do |secret| %>
+    <li><%= secret.title %></li>
+  <% end %>
+</ul>
+
+<%= render 'secrets/form' %>
