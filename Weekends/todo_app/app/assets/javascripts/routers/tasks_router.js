@@ -13,11 +13,7 @@ TD.Routers.TasksRouter = Backbone.Router.extend({
   index: function () {
     var that = this;
 
-    var tasksListView = new TD.Views.TasksListView({
-      collection: that.tasks
-    });
-
-    that.$rootEl.html(tasksListView.render().$el);
+    that.$rootEl.empty();
   },
 
   new: function () {
