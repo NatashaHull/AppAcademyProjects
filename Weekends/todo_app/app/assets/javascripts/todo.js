@@ -6,10 +6,10 @@ window.TD = {
   Routers: {},
 
   initialize: function ($rootEl, tasks) {
-    // we'll call `TD.initialize(rootEl, tasks)` from our HTML to
-    // kick-off the JS client code.
+    var tasksListView = new TD.Views.TasksListView({
+      collection: tasks
+    });
 
-    console.log("Achievement Unlocked: JS Client Code Runs!");
-    console.log(tasks);
+    $rootEl.html(tasksListView.render().$el);
   }
 };
