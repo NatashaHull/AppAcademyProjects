@@ -188,7 +188,7 @@ Solo Day
 
 Projects include:
 
-* Friends Circle (Nested Forms)
+* [Friends Circle](https://github.com/NatashaHull/AppAcademyProjects/tree/master/Week5/W5D2/friends_circle) (Nested Forms)
 
 **Week 5, Day 3 (W5D3)**
 
