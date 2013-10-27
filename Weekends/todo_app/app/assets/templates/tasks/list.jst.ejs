@@ -1,0 +1,20 @@
+<ul>
+  <% tasks.each(function (task) { %>
+    <li class="task">
+      <a href="#/tasks/<%= task.escape("id") %>">
+        <%= task.escape("title")%>
+      </a>
+    </li>
+  <% }); %>
+</ul>
+
+<a href="#/tasks/new">New Task!</a>
+
+<!-- app/assets/templates/tasks/detail.jst.ejs -->
+<h2><%= task.escape("title") %></h2>
+
+<p>
+  You've got your work cut out for you!
+</p>
+
+<a href="#/">Back!</a>
