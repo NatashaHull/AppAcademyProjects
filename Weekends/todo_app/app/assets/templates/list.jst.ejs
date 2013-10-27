@@ -1,5 +1,9 @@
 <ul>
   <% _(tasks).each(function (task) { %>
-    <li><%= task.title %></li>
+    <li class="task">
+      <a href="#/tasks/<%= task.id %>">
+        <%= task.title %>
+      </a>
+    </li>
   <% }); %>
 </ul>

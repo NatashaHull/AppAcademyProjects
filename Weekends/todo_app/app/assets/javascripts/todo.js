@@ -6,10 +6,7 @@ window.TD = {
   Routers: {},
 
   initialize: function ($rootEl, tasks) {
-    var tasksListView = new TD.Views.TasksListView({
-      collection: tasks
-    });
-
-    $rootEl.html(tasksListView.render().$el);
+    new TD.Routers.TasksRouter($rootEl, tasks);
+    Backbone.history.start();
   }
 };
