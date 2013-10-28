@@ -10,3 +10,4 @@ Click on one of the weeks below to see a list of pair programming partners and s
 * [Week 4](https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week4)
 * [Week 5](https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week5)
 * [Week 6](https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week6)
+* [Week 7](https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week7)
