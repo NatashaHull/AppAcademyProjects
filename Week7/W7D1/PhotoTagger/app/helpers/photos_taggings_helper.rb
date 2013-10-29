@@ -1,0 +1,2 @@
+module PhotosTaggingsHelper
+end
