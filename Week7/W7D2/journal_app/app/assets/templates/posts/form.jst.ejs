@@ -1,4 +1,4 @@
-<h1>Edit "<%= post.get("title") %>"</h1>
+<h1><%= post.isNew() ? "Create a New Post!" : "Edit '" + post.get("title") + "'" %></h1>
 <form id="post">
   <label for="post_title">Title</label>
   <input type="text" name="post[title]" value="<%= post.get("title") %>" id="post_title">

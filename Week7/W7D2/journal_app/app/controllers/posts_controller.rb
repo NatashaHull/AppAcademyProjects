@@ -7,6 +7,16 @@ class PostsController < ApplicationController
     render :json => Post.find(params[:id])
   end
 
+  def create
+    @post = Post.new(params[:post])
+
+    if @post.save
+      render :json => @post
+    else
+      render :json => @post.errors.full_messages, :status => :unprocessible_entity
+    end
+  end
+
   def update
     @post = Post.find(params[:id])
 

@@ -2,10 +2,12 @@
 <ul>
   <% posts.forEach(function(post) { %>
     <li>
-      <a href="#/posts/<%= post.get("id") %>"><%= post.get("title") %></a>
+      <a href="#posts/<%= post.get("id") %>"><%= post.get("title") %></a>
       <button type="button" class="delete" data-id="<%= post.id %>">
         Delete
       </button>
     </li>
   <% }); %>
 </ul>
+
+<a href="#posts/new">Create a new Post!</a>

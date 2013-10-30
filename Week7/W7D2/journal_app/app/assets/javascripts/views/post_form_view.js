@@ -1,5 +1,5 @@
-JournalApp.Views.PostFormtView = Backbone.View.extend({
-  template: JST['posts/edit'],
+JournalApp.Views.PostFormView = Backbone.View.extend({
+  template: JST['posts/form'],
 
   events: {
     "submit #post": "editPost"
@@ -13,21 +13,22 @@ JournalApp.Views.PostFormtView = Backbone.View.extend({
   },
 
   editPost: function(event) {
+    var that = this;
     event.preventDefault();
     var form = $(event.currentTarget);
     var postData = form.serializeJSON();
-    this.model.set(postData);
-    this.model.save(null, {
+    that.model.set(postData);
+    that.model.save(null, {
       success: function() {
-        this.collection.set(model);
-        Backbone.history.navigate("#", { trigger: true });
+        that.collection.set(that.model);
+        Backbone.history.navigate("#");
       },
 
-      error: function(errors) {
-        console.log(errors);
-        // errors.forEach(function(error) {
-//           $("#post").prepend(error);
-//         });
+      error: function(model, errors) {
+        var valErrors = errors.responseJSON;
+        valErrors.forEach(function(error) {
+          $("#post").prepend(error + "</br>");
+        });
       },
     });
   }
