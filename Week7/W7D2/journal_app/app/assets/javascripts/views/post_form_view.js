@@ -13,15 +13,15 @@ JournalApp.Views.PostFormView = Backbone.View.extend({
   },
 
   editPost: function(event) {
-    var that = this;
+    var that = this
     event.preventDefault();
     var form = $(event.currentTarget);
     var postData = form.serializeJSON();
     that.model.set(postData);
     that.model.save(null, {
       success: function() {
-        that.collection.set(that.model);
-        Backbone.history.navigate("#");
+        that.collection.add(that.model);
+        Backbone.history.navigate("#", { trigger: true });
       },
 
       error: function(model, errors) {
