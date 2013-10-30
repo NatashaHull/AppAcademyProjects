@@ -1,4 +1,4 @@
-JournalApp.Views.PostEditView = Backbone.View.extend({
+JournalApp.Views.PostFormtView = Backbone.View.extend({
   template: JST['posts/edit'],
 
   events: {
@@ -19,6 +19,7 @@ JournalApp.Views.PostEditView = Backbone.View.extend({
     this.model.set(postData);
     this.model.save(null, {
       success: function() {
+        this.collection.set(model);
         Backbone.history.navigate("#", { trigger: true });
       },
 
