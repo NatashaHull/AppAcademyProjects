@@ -7,7 +7,7 @@ window.JournalApp = {
     JournalApp.posts = new JournalApp.Collections.Posts();
     JournalApp.posts.fetch({
       success: function() {
-        new JournalApp.Routers.PostsRouter();
+        new JournalApp.Routers.PostsRouter($("#content"));
         Backbone.history.start();
       }
     });
