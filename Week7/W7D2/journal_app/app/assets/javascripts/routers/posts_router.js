@@ -1,6 +1,7 @@
 JournalApp.Routers.PostsRouter = Backbone.Router.extend({
   initialize: function($rootEl) {
     this.$rootEl = $rootEl
+    this.index();
   },
 
   routes: {
@@ -15,7 +16,7 @@ JournalApp.Routers.PostsRouter = Backbone.Router.extend({
     var indexView = new JournalApp.Views.PostIndexView({
       collection: JournalApp.posts
     });
-    that.$rootEl.html(indexView.render().$el);
+    $('#sidebar').html(indexView.render().$el);
   },
 
   show: function(id) {
