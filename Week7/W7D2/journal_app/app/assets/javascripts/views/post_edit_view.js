@@ -23,9 +23,10 @@ JournalApp.Views.PostEditView = Backbone.View.extend({
       },
 
       error: function(errors) {
-        errors.forEach(function(error) {
-          $("#post").prepend(error);
-        });
+        console.log(errors);
+        // errors.forEach(function(error) {
+//           $("#post").prepend(error);
+//         });
       },
     });
   }
