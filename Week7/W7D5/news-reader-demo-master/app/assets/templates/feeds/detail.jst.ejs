@@ -1,0 +1,13 @@
+<h1><%= feed.escape("title") %></h1>
+<button type="button" class="refreshEntries">Refresh</button>
+
+<ul class="feedEntriesList">
+  <% feed.entries().forEach(function(entry) { %>
+    <li>
+      <a
+       href="#feeds/<%= feed.escape("id") %>/entries/<%= entry.escape("id") %>">
+        <%= entry.escape("title") %>
+      </a>
+    </li>
+  <% }); %>
+</ul>

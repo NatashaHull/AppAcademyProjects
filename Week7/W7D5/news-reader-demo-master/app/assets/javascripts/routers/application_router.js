@@ -6,6 +6,7 @@ NewReader.ApplicationRouter = Backbone.Router.extend({
   routes: {
     "": "index",
     "feeds/:id": "show"
+    "feeds/:feedId/entries/:id": "showEntry"
   },
 
   index: function() {
@@ -19,6 +20,15 @@ NewReader.ApplicationRouter = Backbone.Router.extend({
     var feed = NewReader.feeds.get(id);
     var showView = new NewReader.Views.FeedView({
       model: feed
+    });
+    this._swapView(showView);
+  },
+
+  showEntry: function(feedId, id) {
+    var feed = NewReader.feeds.get(feedId);
+    var entry = feed.entries().get(id);
+    var showView = new NewReader.Views.EntryView({
+      model: entry
     });
     this._swapView(showView);
   },
