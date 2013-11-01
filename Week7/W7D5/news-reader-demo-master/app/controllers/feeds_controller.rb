@@ -1,8 +1,19 @@
 class FeedsController < ApplicationController
   def index
+    @feeds = Feed.all
+    
+    #Reload if it's been more than two minutes since the last reload.
+    most_recent_reload = @feeds.last.updated_at
+    current_time = Time.now
+    if (current_time - most_recent_reload).to_s > 120
+      ActiveRecord::Base.transcation do
+        @feeds.each(&:reload)
+      end
+    end
+
     respond_to do |format|
       format.html { render :index }
-      format.json { render :json => Feed.all }
+      format.json { render :json => @feeds }
     end
   end
 
