@@ -4,7 +4,13 @@ window.NewReader = {
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello from Backbone!');
+    NewReader.feeds = new NewReader.Collections.Feeds();
+    NewReader.feeds.fetch({
+      success: function() {
+        new NewReader.ApplicationRouter($("#content"));
+        Backbone.history.start();
+      }
+    });
   }
 };
 
