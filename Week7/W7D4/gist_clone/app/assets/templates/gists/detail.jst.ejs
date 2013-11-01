@@ -1,0 +1,8 @@
+<%= gist.escape("title") %>
+<button type="button" id="star"
+        class="<%= gist.star().escape("id") ? "hidden" : "" %>">
+  Star
+</button>
+<button type="button" id="unstar"
+        class="<%= gist.star().escape("id") ? "" : "hidden" %>">
+  Unstar</button>
