@@ -15,3 +15,11 @@ Partner: Solo Days
 Projects include:
 
 * Journal App (Backbone.js)
+
+**Week 7, Day 4 (W7D4)**
+
+Partner: Jeff Rosen
+
+Projects include:
+
+* Gist Clone
