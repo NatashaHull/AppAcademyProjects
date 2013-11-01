@@ -1,6 +1,6 @@
 class FeedsController < ApplicationController
   def index
-    @feeds = Feed.all
+    @feeds = Feed.includes(:entries).all
     
     #Reload if it's been more than two minutes since the last reload.
     most_recent_reload = @feeds.last.updated_at
@@ -13,7 +13,7 @@ class FeedsController < ApplicationController
 
     respond_to do |format|
       format.html { render :index }
-      format.json { render :json => @feeds }
+      format.json { render :json => @feeds, :include => :entries }
     end
   end
 
