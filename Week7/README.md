@@ -10,7 +10,7 @@ Projects include:
 
 **Week 7, Day 2-3 (W7D2-3)**
 
-Partner: Solo Days
+Solo Days
 
 Projects include:
 
@@ -23,3 +23,11 @@ Partner: Jeff Rosen
 Projects include:
 
 * Gist Clone
+ 
+**Week 7, Day 5 (W7D5)**
+
+Solo Day
+
+Projects include:
+
+* News Reader
