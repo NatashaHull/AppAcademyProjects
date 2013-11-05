@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="javascripts/chat.js"></script>
+    <script src="javascripts/chat_ui.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="col-1" style="float:left; width: 40%;">
+      <div id="messages">
+      </div>
+      <form id="message-form">
+        <label for="message_content">New Message</label>
+        </br>
+        <textarea id="message_content" rows="10" cols="20"></textarea>
+
+        <p><input type="submit" value="Submit Message"></p>
+      </form>
+    </div>
+    <div id="col-2" style="float:left; width: 40%;">
+      <div id="rooms">
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

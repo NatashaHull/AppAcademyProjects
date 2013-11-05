@@ -1,0 +1,5 @@
+^\/nick\s
+var nickname = "nick nickname".split(" ")
+if(nickname[0] === "/nick") {
+  nickname[1];
+}
