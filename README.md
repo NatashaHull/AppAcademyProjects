@@ -20,3 +20,4 @@ Click on one of the weeks below to see a list of pair programming partners and s
 * [Towers-of-Hanoi](https://github.com/NatashaHull/AppAcademyProjects/tree/master/Week6/W6D4/towersofhanoi) (Javascript and jQuery Version)
 * [Tic-Tac-Toe](https://github.com/NatashaHull/AppAcademyProjects/tree/master/Week6/W6D4/tic-tac-toe) (Javascript and jQuery Version)
 * [Snake Game](https://github.com/NatashaHull/AppAcademyProjects/tree/master/Week6/W6D4/snake)
+* [Chat App](https://github.com/NatashaHull/AppAcademyProjects/tree/master/Week8/W8D1/my_chat_app)
