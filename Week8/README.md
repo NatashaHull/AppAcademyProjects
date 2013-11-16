@@ -6,4 +6,4 @@ Partner: William Ott
 
 Projects include:
 
-* Chat App (Node.js and Websockets)
+* [Chat App](https://github.com/NatashaHull/AppAcademyProjects/tree/master/Week8/W8D1/my_chat_app) (Node.js and Websockets)
