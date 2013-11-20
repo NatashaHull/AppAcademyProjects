@@ -3,7 +3,7 @@ Rails Lite
 #Files
 * [Server](https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week5/W5D3/rails_lite-skeleton/test/my_first_server.rb)
 * [Controller Base](https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week5/W5D3/rails_lite-skeleton/lib/rails_lite/controller_base.rb)
-This recreates many of the actions present in Rails's ActionController::Base.
+This recreates many of the actions present in Rails's ActionController::Base, namely `render` and `redirect_to`.
 * [Params](https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week5/W5D3/rails_lite-skeleton/lib/rails_lite/params.rb)
 This extracts a params hash from the server request.
 * [Session](https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week5/W5D3/rails_lite-skeleton/lib/rails_lite/session.rb)
