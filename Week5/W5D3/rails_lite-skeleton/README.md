@@ -9,7 +9,7 @@ This extracts a params hash from the server request.
 * [Session](https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week5/W5D3/rails_lite-skeleton/lib/rails_lite/session.rb)
 This module adds cookies to the server's response to keep track of session information set by the controller.
 * [Router](https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week5/W5D3/rails_lite-skeleton/lib/rails_lite/router.rb)
-This recreates Rails's Application.Router
+This recreates Rails's Application.routes
 * [Url Helper](https://github.com/NatashaHull/AppAcademyProjects/blob/master/Week5/W5D3/rails_lite-skeleton/lib/rails_lite/url_helper.rb)
 This creates url helper methods for simple urls (url's that do not include any parameters) when they are defined in the router.
 
