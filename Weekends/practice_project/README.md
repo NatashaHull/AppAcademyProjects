@@ -11,7 +11,7 @@ Features of this app include:
 * Sign-up
   * The submit button on the Sign-up page creates a name, username, and password on sign-up and a new user
 * Sign-in
-  * Sign-in is handled by the SessionsController
+  * Sign-in is handled by the `SessionsController`
   * Sign-in requires a username and password
 * FollowingsController
   * Each user sees buttons to follow, or unfollow, other users
