@@ -1,8 +1,8 @@
 Follower App/Authentication Practice Project
 ==============================
-This is an application that I programmed in under 2 hours which has all the basic features of authentication as well as a handful of features relevant of following other users.
+This is an application that I programmed in under 2 hours which has all the basic features of authentication as well as a handful of features relevant for following other users.
 
-The prompt to create this app specified the following:
+The prompt to create this app was the following:
 
 * Profile page
   * Should see a list of people user is following and people who
